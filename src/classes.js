@@ -55,7 +55,7 @@ class Settings {
         {
           type: 'checkbox',
           name: 'blogs',
-          checked: mainSettings.settings['what to stop']['blogs'],
+          checked: mainSettings.settings['what to group']['blogs'],
           text: 'Группировать блоги'
         }
       ]
