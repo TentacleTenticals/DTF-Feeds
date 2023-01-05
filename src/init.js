@@ -13,6 +13,9 @@
 
 let mainSettings;
 let defaultSettings = {
+  settings: {
+    test: ''
+  },
   data: {
     watched: [],
     blocked: []
