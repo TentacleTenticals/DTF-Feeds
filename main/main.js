@@ -166,9 +166,9 @@ class FeedGroups{
       this.watched.className='feedBtn';
       this.watched.textContent='✔️';
       this.watched.onclick=(e) => {
-        items.watched.includes(e.target.parentNode.parentNode.parentNode.getAttribute('data-content-id')) ? (items.watched = items.watched.filter(i => i !== e.target.parentNode.parentNode.parentNode.getAttribute('data-content-id'))) : items.watched.push(e.target.parentNode.parentNode.parentNode.getAttribute('data-content-id'));
+        mainSettings.data.watched.includes(e.target.parentNode.parentNode.parentNode.getAttribute('data-content-id')) ? (mainSettings.data.watched = mainSettings.data.watched.filter(i => i !== e.target.parentNode.parentNode.parentNode.getAttribute('data-content-id'))) : mainSettings.data.watched.push(e.target.parentNode.parentNode.parentNode.getAttribute('data-content-id'));
         e.target.parentNode.parentNode.parentNode.parentNode.classList.toggle('watched');
-        console.log(items.watched);
+        console.log(mainSettings.data.watched);
       }
       this.main.appendChild(this.watched);
 
@@ -195,7 +195,7 @@ class FeedGroups{
       }else
       if(arr[i].querySelector(`div[class=content-header__info]`).children.length > 2){
         if(arr[i].querySelector(`div[class=content-header__info]`).children[1].classList.value.match(/content-header-author/)){
-          if(items.watched.includes(arr[i].getAttribute('data-content-id'))){
+          if(mainSettings.data.watched.includes(arr[i].getAttribute('data-content-id'))){
             console.log('Watched');
             arr[i].classList.toggle('watched');
           }
