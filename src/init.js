@@ -14,7 +14,10 @@
 let mainSettings;
 let defaultSettings = {
   settings: {
-    test: ''
+    ['what to group']: {
+      ['subsites']: true,
+      ['blogs']: true
+    }
   },
   data: {
     watched: [],
