@@ -27,34 +27,34 @@ let defaultSettings = {
       'title': {
         'active': true,
         'what to do': 'collapse',
-        'title': {
-          'react title': true,
-          'react no title': true,
-          'words': []
-        },
-        'text': {
-          'react text': true,
-          'react no text': true,
-          'words': []
-        }
+        'react title': true,
+        'react no title': true,
+        'words': []
+      },
+      'text': {
+        'active': true,
+        'what to do': 'collapse',
+        'react text': true,
+        'react no text': true,
+        'words': []
       }
     },
     'blogs': {
       'title': {
         'active': true,
         'what to do': 'collapse',
-        'title': {
-          'react title': true,
-          'react no title': true,
-          'words': []
-        },
-        'text': {
-          'react text': true,
-          'react no text': true,
-          'words': []
-        }
+        'react title': true,
+        'react no title': true,
+        'words': []
+      },
+      'text': {
+        'active': true,
+        'what to do': 'collapse',
+        'react text': true,
+        'react no text': true,
+        'words': []
       }
-    }
+    },
   },
   'what with': {
     'ignored': {
