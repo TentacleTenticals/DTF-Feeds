@@ -1,5 +1,5 @@
 function setSettings(main, mainCfg){
-    new LiveList({
+    new LiveList().List({
         path: main,
         value: ['Test', 'Fest']
     })
