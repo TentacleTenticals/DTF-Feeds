@@ -31,7 +31,11 @@ const mainCSS = `
 }
 
 .dtf-feedGroups .groupList {
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0 0 4px;
   padding: 0px 5px 0px 0px;
+  gap: 5px 0;
 }
 
 .dtf-feedGroups .dtf-feed-group .subGroup {
@@ -58,15 +62,6 @@ const mainCSS = `
   padding: 3px;
   font-size: 14px;
   cursor: pointer;
-}
-.dtf-feedGroups .panel {
-  width: 100%;
-  color: white;
-  margin: 5px 0 5px 0;
-  padding: 3px;
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 0 2px 1px rgb(0 0 0);
 }
 .dtf-feed-group .groupHeader {
     background-color: rgb(58 21 78);
