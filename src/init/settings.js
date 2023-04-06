@@ -1,8 +1,4 @@
 function setSettings(main, mainCfg){
-    new LiveList().List({
-        path: main,
-        value: ['Test', 'Fest']
-    })
     new Field({
       path: main,
       groupName: 'working mode',
@@ -158,12 +154,11 @@ function setSettings(main, mainCfg){
             name: 'react no text'
           }
       ]},
-      liveList: {c:{g:'subsites.text'},
+      liveList: {c:{g:'subsites.text'}, a:mainCfg,
         list:[
         {
           label: 'Test',
-          name: 'words',
-          value: ['1', '2', '3']
+          name: 'words'
         }]
       }
     });
