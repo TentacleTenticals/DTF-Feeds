@@ -1,4 +1,8 @@
 function setSettings(main, mainCfg){
+    new LiveList({
+        path: main,
+        value: ['Test', 'Fest']
+    })
     new Field({
       path: main,
       groupName: 'working mode',
