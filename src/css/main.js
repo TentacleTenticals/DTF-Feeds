@@ -470,7 +470,28 @@ const mainCSS = `
   margin: 0px 0px 0px 19px;
 }
 
-
+.dtf-menuButton {
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.dtf-menuButton .menuList {
+  display: none;
+  position: absolute;
+  margin: 0px 0px 0px -5px;
+}
+.dtf-menuButton:hover .menuList,
+.dtf-menuButton .menuList:hover {
+  background: rgb(255 255 255);
+  width: max-content;
+  height: max-content;
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px 5px;
+  box-shadow: 0px 0px 2px 1px rgb(0 0 0);
+  z-index: 10;
+}
 
 
 
