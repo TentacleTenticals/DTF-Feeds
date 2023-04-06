@@ -154,10 +154,10 @@ function setSettings(main, mainCfg){
             name: 'react no text'
           }
       ]},
-      liveList: {c:{g:'subsites.text'}, a:mainCfg,
+      liveList: {c:{g:'subsites.title'}, a:mainCfg,
         list:[
         {
-          label: 'Test',
+          label: 'Title',
           name: 'words'
         }]
       }
