@@ -46,14 +46,14 @@ let defaultSettings = {
     'subsites': {
       'title': {
         'active': true,
-        'what to do': 'collapse',
-        'react title': true,
-        'react no title': true,
+        'action': 'collapse',
+        'react text': true,
+        'react no text': true,
         'words': []
       },
       'text': {
         'active': true,
-        'what to do': 'collapse',
+        'action': 'collapse',
         'react text': true,
         'react no text': true,
         'words': []
@@ -62,14 +62,14 @@ let defaultSettings = {
     'blogs': {
       'title': {
         'active': true,
-        'what to do': 'collapse',
-        'react title': true,
-        'react no title': true,
+        'action': 'collapse',
+        'react text': true,
+        'react no text': true,
         'words': []
       },
       'text': {
         'active': true,
-        'what to do': 'collapse',
+        'action': 'collapse',
         'react text': true,
         'react no text': true,
         'words': []
