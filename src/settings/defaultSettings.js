@@ -11,12 +11,12 @@ let defaultSettings = {
     'topics': true
   },
   'what to show in': {
-    'popular': 'blogs and subsites',
-    'new': 'blogs and subsites',
-    'my new': 'blogs and subsites',
-    'subsites': 'blogs and subsites',
-    'user pages': 'blogs and subsites',
-    'topics': 'blogs and subsites'
+    'popular': 'subsites and blogs',
+    'new': 'subsites and blogs',
+    'my new': 'subsites and blogs',
+    'subsites': 'subsites and blogs',
+    'user pages': 'subsites and blogs',
+    'topics': 'subsites and blogs'
   },
   'what to group': {
     'subsites': true,
