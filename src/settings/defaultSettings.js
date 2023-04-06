@@ -78,7 +78,7 @@ let defaultSettings = {
       }
     }
   },
-  'data': {
+  data: {
     'watched feeds': [],
     'ignored feeds': [],
     'favorite authors': [],
