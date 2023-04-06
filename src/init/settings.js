@@ -6,7 +6,7 @@ function setSettings(main, mainCfg){
       legend: 'Тип действия',
       info: 'Как скрипту действовать',
       rtn: [],
-      select: {c:{g:true}, a:{cfg:mainCfg},
+      select: {c:true, a:{cfg:mainCfg},
         list:[
           {
             label: 'Тип действия',
@@ -22,7 +22,7 @@ function setSettings(main, mainCfg){
       cName: 'grid',
       legend: 'Где действовать',
       info: 'Где именнно действовать',
-      inputs: {c:{g:true}, a:{cfg:mainCfg},
+      inputs: {c:true, a:{cfg:mainCfg},
         list:[
           {
             type: 'checkbox',
@@ -31,12 +31,12 @@ function setSettings(main, mainCfg){
           },
           {
             type: 'checkbox',
-            label: 'Новое',
+            label: 'Свежее',
             name: 'new'
           },
           {
             type: 'checkbox',
-            label: 'Моё новое',
+            label: 'Моя лента',
             name: 'my new'
           },
           {
@@ -64,7 +64,7 @@ function setSettings(main, mainCfg){
         legend: 'Вложения в комментариях (настройка)',
         info: 'Автовоспроизведение',
         rtn: [],
-        select: {c:{g:true}, a:{cfg:mainCfg},
+        select: {c:true, a:{cfg:mainCfg},
           list:[
             {
               label: 'Популярное',
@@ -106,7 +106,7 @@ function setSettings(main, mainCfg){
         legend: 'Группировка',
         info: 'Что группировать',
         rtn: [],
-        inputs: {c:{g:true}, a:{cfg:mainCfg},
+        inputs: {c:true, a:{cfg:mainCfg},
           list:[
             {
               type: 'checkbox',
@@ -114,7 +114,7 @@ function setSettings(main, mainCfg){
               name: 'subsites'
             },
             {
-              type: 'checbox',
+              type: 'checkbox',
               label: 'Блоги',
               name: 'blogs'
             }
