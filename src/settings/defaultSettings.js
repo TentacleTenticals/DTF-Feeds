@@ -23,6 +23,26 @@ let defaultSettings = {
     'blogs': true
   },
   'filters': {
+    'ignored': {
+      'feeds': {
+        'action': 'collapse',
+        'color': ''
+      },
+      'authors': {
+        'action': 'collapse',
+        'color': ''
+      },
+      'subsites': {
+        'action': 'collapse',
+        'color': ''
+      }
+    },
+    'watched': {
+      'feeds': {
+        'action': 'collapse',
+        'color': ''
+      }
+    },
     'subsites': {
       'title': {
         'active': true,
@@ -55,28 +75,6 @@ let defaultSettings = {
         'words': []
       }
     },
-  },
-  'what with': {
-    'ignored': {
-      'feeds': {
-        'action': 'collapse',
-        'color': ''
-      },
-      'authors': {
-        'action': 'collapse',
-        'color': ''
-      },
-      'subsites': {
-        'action': 'collapse',
-        'color': ''
-      }
-    },
-    'watched': {
-      'feeds': {
-        'action': 'collapse',
-        'color': ''
-      }
-    }
   },
   'script data': {
     'watched feeds': [],
