@@ -3,8 +3,8 @@ function setSettings(main, mainCfg){
       path: main,
       groupName: 'working mode',
       cName: 'grid',
-      legend: 'Тип действия',
-      info: 'Как скрипту действовать',
+      legend: 'Режим работы',
+      info: 'Ручной режим с панелью, или же автоматический с обсервером',
       rtn: [],
       select: {c:true, a:{cfg:mainCfg},
         list:[
@@ -59,10 +59,10 @@ function setSettings(main, mainCfg){
 
       new Field({
         path: main,
-        groupName: 'attachments',
+        groupName: 'what to show in',
         cName: 'grid',
-        legend: 'Вложения в комментариях (настройка)',
-        info: 'Автовоспроизведение',
+        legend: 'Что показывать',
+        info: 'Бла бла бла',
         rtn: [],
         select: {c:true, a:{cfg:mainCfg},
           list:[
