@@ -153,7 +153,14 @@ function setSettings(main, mainCfg){
             label: 'Реагировать на отсутствие текста',
             name: 'react no text'
           }
-      ]}
+      ]},
+      liveList: {c:{g:'subsites.text'}, a:mainCfg,
+        list:[
+        {
+          label: 'Test',
+          name: 'words'
+        }]
+      }
     });
 
     new Field({
