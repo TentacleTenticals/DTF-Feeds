@@ -49,7 +49,7 @@ let defaultSettings = {
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': []
+        'words': ['testWord']
       },
       'text': {
         'active': true,
