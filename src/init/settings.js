@@ -6,7 +6,7 @@ function setSettings(main, mainCfg){
       legend: 'Режим работы',
       info: 'Ручной режим с панелью, или же автоматический с обсервером',
       rtn: [],
-      select: {c:true, a:{cfg:mainCfg},
+      select: {c:true, a:mainCfg,
         list:[
           {
             label: 'Тип действия',
@@ -22,7 +22,7 @@ function setSettings(main, mainCfg){
       cName: 'grid',
       legend: 'Где действовать',
       info: 'Где именнно действовать',
-      inputs: {c:true, a:{cfg:mainCfg},
+      inputs: {c:true, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -64,7 +64,7 @@ function setSettings(main, mainCfg){
         legend: 'Что показывать',
         info: 'Бла бла бла',
         rtn: [],
-        select: {c:true, a:{cfg:mainCfg},
+        select: {c:true, a:mainCfg,
           list:[
             {
               label: 'Популярное',
@@ -106,7 +106,7 @@ function setSettings(main, mainCfg){
         legend: 'Группировка',
         info: 'Что группировать',
         rtn: [],
-        inputs: {c:true, a:{cfg:mainCfg},
+        inputs: {c:true, a:mainCfg,
           list:[
             {
               type: 'checkbox',
@@ -128,7 +128,7 @@ function setSettings(main, mainCfg){
       legend: 'Фильтры',
       info: 'Фильтры фидов',
       rtn: [],
-      select: {c:{g:'subsites.title'}, a:{cfg:mainCfg},
+      select: {c:{g:'subsites.title'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -136,7 +136,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'subsites.title'}, a:{cfg:mainCfg},
+      inputs: {c:{g:'subsites.title'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -163,7 +163,7 @@ function setSettings(main, mainCfg){
       legend: 'Фильтры',
       info: 'Фильтры фидов',
       rtn: [],
-      select: {c:{g:'subsites.text'}, a:{cfg:mainCfg},
+      select: {c:{g:'subsites.text'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -171,7 +171,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'subsites.text'}, a:{cfg:mainCfg},
+      inputs: {c:{g:'subsites.text'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -198,7 +198,7 @@ function setSettings(main, mainCfg){
       legend: 'Фильтры',
       info: 'Фильтры фидов',
       rtn: [],
-      select: {c:{g:'blogs.title'}, a:{cfg:mainCfg},
+      select: {c:{g:'blogs.title'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -206,7 +206,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'blogs.title'}, a:{cfg:mainCfg},
+      inputs: {c:{g:'blogs.title'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -233,7 +233,7 @@ function setSettings(main, mainCfg){
       legend: 'Фильтры',
       info: 'Фильтры фидов',
       rtn: [],
-      select: {c:{g:'blogs.title'}, a:{cfg:mainCfg},
+      select: {c:{g:'blogs.title'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -241,7 +241,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'blogs.title'}, a:{cfg:mainCfg},
+      inputs: {c:{g:'blogs.title'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -268,7 +268,7 @@ function setSettings(main, mainCfg){
       legend: 'Фильтры',
       info: 'Фильтры фидов',
       rtn: [],
-      select: {c:{g:'ignored.feeds'}, a:{cfg:mainCfg},
+      select: {c:{g:'ignored.feeds'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -276,7 +276,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'ignored.feeds'}, a:{cfg:mainCfg},
+      inputs: {c:{g:'ignored.feeds'}, a:mainCfg,
         list:[
           {
             type: 'color',
@@ -293,7 +293,7 @@ function setSettings(main, mainCfg){
       legend: 'Фильтры',
       info: 'Фильтры фидов',
       rtn: [],
-      select: {c:{g:'ignored.subsites'}, a:{cfg:mainCfg},
+      select: {c:{g:'ignored.subsites'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -301,7 +301,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'ignored.subsites'}, a:{cfg:mainCfg},
+      inputs: {c:{g:'ignored.subsites'}, a:mainCfg,
         list:[
           {
             type: 'color',
@@ -318,7 +318,7 @@ function setSettings(main, mainCfg){
       legend: 'Фильтры',
       info: 'Фильтры фидов',
       rtn: [],
-      select: {c:{g:'ignored.authors'}, a:{cfg:mainCfg},
+      select: {c:{g:'ignored.authors'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -326,7 +326,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'ignored.authors'}, a:{cfg:mainCfg},
+      inputs: {c:{g:'ignored.authors'}, a:mainCfg,
         list:[
           {
             type: 'color',
@@ -343,7 +343,7 @@ function setSettings(main, mainCfg){
       legend: 'Фильтры',
       info: 'Фильтры фидов',
       rtn: [],
-      select: {c:{g:'watched.feeds'}, a:{cfg:mainCfg},
+      select: {c:{g:'watched.feeds'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -351,7 +351,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'watched.feeds'}, a:{cfg:mainCfg},
+      inputs: {c:{g:'watched.feeds'}, a:mainCfg,
         list:[
           {
             type: 'color',
