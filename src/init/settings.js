@@ -157,7 +157,7 @@ function setSettings(main, mainCfg){
       liveList: {c:{g:'subsites.title'}, a:mainCfg,
         list:[
         {
-          type: 'str-value',
+          type: 'string',
           label: 'Regex фильтр заголовков',
           name: 'words'
         }]
@@ -200,7 +200,7 @@ function setSettings(main, mainCfg){
       liveList: {c:{g:'subsites.text'}, a:mainCfg,
         list:[
         {
-          type: 'str-value',
+          type: 'string',
           label: 'Regex фильтр текста',
           name: 'words'
         }]
@@ -243,7 +243,7 @@ function setSettings(main, mainCfg){
       liveList: {c:{g:'blogs.title'}, a:mainCfg,
         list:[
         {
-          type: 'str-value',
+          type: 'string',
           label: 'Regex фильтр заголовков',
           name: 'words'
         }]
@@ -286,7 +286,7 @@ function setSettings(main, mainCfg){
       liveList: {c:{g:'blogs.text'}, a:mainCfg,
         list:[
         {
-          type: 'str-value',
+          type: 'string',
           label: 'Regex фильтр текста',
           name: 'words'
         }]
