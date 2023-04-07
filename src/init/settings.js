@@ -297,8 +297,8 @@ function setSettings(main, mainCfg){
       path: main,
       groupName: 'filters',
       cName: 'grid',
-      legend: 'Фильтры',
-      info: 'Фильтры фидов',
+      legend: 'Фильтры фидов',
+      info: 'Игнорируемые',
       rtn: [],
       select: {c:{g:'ignored.feeds'}, a:mainCfg,
         list:[
@@ -312,7 +312,7 @@ function setSettings(main, mainCfg){
         list:[
           {
             type: 'color',
-            label: 'Активен',
+            label: 'Цвет',
             name: 'color'
           }
       ]}
@@ -322,8 +322,8 @@ function setSettings(main, mainCfg){
       path: main,
       groupName: 'filters',
       cName: 'grid',
-      legend: 'Фильтры',
-      info: 'Фильтры фидов',
+      legend: 'Фильтры подсайтов',
+      info: 'Игнорируемые',
       rtn: [],
       select: {c:{g:'ignored.subsites'}, a:mainCfg,
         list:[
@@ -337,7 +337,7 @@ function setSettings(main, mainCfg){
         list:[
           {
             type: 'color',
-            label: 'Активен',
+            label: 'Цвет',
             name: 'color'
           }
       ]}
@@ -347,8 +347,8 @@ function setSettings(main, mainCfg){
       path: main,
       groupName: 'filters',
       cName: 'grid',
-      legend: 'Фильтры',
-      info: 'Фильтры фидов',
+      legend: 'Фильтры авторов',
+      info: 'Игнорируемые',
       rtn: [],
       select: {c:{g:'ignored.authors'}, a:mainCfg,
         list:[
@@ -362,7 +362,7 @@ function setSettings(main, mainCfg){
         list:[
           {
             type: 'color',
-            label: 'Активен',
+            label: 'Цвет',
             name: 'color'
           }
       ]}
@@ -372,8 +372,8 @@ function setSettings(main, mainCfg){
       path: main,
       groupName: 'filters',
       cName: 'grid',
-      legend: 'Фильтры',
-      info: 'Фильтры фидов',
+      legend: 'Фильтры фидов',
+      info: 'Просмотренные',
       rtn: [],
       select: {c:{g:'watched.feeds'}, a:mainCfg,
         list:[
@@ -387,7 +387,7 @@ function setSettings(main, mainCfg){
         list:[
           {
             type: 'color',
-            label: 'Активен',
+            label: 'Цвет',
             name: 'color'
           }
       ]}
