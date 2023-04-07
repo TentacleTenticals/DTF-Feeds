@@ -124,9 +124,9 @@ function setSettings(main, mainCfg){
     new Field({
       path: main,
       groupName: 'filters',
-      cName: 'grid',
-      legend: 'Фильтры',
-      info: 'Фильтры фидов',
+      cName: 'flex',
+      legend: 'Фильтры подсайтов',
+      info: 'Заголовок',
       rtn: [],
       select: {c:{g:'subsites.title'}, a:mainCfg,
         list:[
@@ -145,12 +145,12 @@ function setSettings(main, mainCfg){
           },
           {
             type: 'checkbox',
-            label: 'Реагировать на текст',
+            label: 'Реагировать на заголовок',
             name: 'react on text'
           },
           {
             type: 'checkbox',
-            label: 'Реагировать на отсутствие текста',
+            label: 'Реагировать на отсутствие заголовка',
             name: 'react no text'
           }
       ]},
@@ -158,7 +158,7 @@ function setSettings(main, mainCfg){
         list:[
         {
           type: 'str-value',
-          label: 'Title',
+          label: 'Regex фильтр заголовков',
           name: 'words'
         }]
       }
@@ -167,9 +167,9 @@ function setSettings(main, mainCfg){
     new Field({
       path: main,
       groupName: 'filters',
-      cName: 'grid',
-      legend: 'Фильтры',
-      info: 'Фильтры фидов',
+      cName: 'flex',
+      legend: 'Фильтры подсайтов',
+      info: 'Текст',
       rtn: [],
       select: {c:{g:'subsites.text'}, a:mainCfg,
         list:[
@@ -200,7 +200,8 @@ function setSettings(main, mainCfg){
       liveList: {c:{g:'subsites.text'}, a:mainCfg,
         list:[
         {
-          label: 'Test',
+          type: 'str-value',
+          label: 'Regex фильтр текста',
           name: 'words'
         }]
       }
@@ -209,9 +210,9 @@ function setSettings(main, mainCfg){
     new Field({
       path: main,
       groupName: 'filters',
-      cName: 'grid',
-      legend: 'Фильтры',
-      info: 'Фильтры фидов',
+      cName: 'flex',
+      legend: 'Фильтры блогов',
+      info: 'Заголовок',
       rtn: [],
       select: {c:{g:'blogs.title'}, a:mainCfg,
         list:[
@@ -230,25 +231,33 @@ function setSettings(main, mainCfg){
           },
           {
             type: 'checkbox',
-            label: 'Реагировать на текст',
+            label: 'Реагировать на заголовок',
             name: 'react on text'
           },
           {
             type: 'checkbox',
-            label: 'Реагировать на отсутствие текста',
+            label: 'Реагировать на отсутствие заголовка',
             name: 'react no text'
           }
-      ]}
+      ]},
+      liveList: {c:{g:'blogs.title'}, a:mainCfg,
+        list:[
+        {
+          type: 'str-value',
+          label: 'Regex фильтр заголовков',
+          name: 'words'
+        }]
+      }
     });
 
     new Field({
       path: main,
       groupName: 'filters',
-      cName: 'grid',
-      legend: 'Фильтры',
-      info: 'Фильтры фидов',
+      cName: 'flex',
+      legend: 'Фильтры блогов',
+      info: 'Текст',
       rtn: [],
-      select: {c:{g:'blogs.title'}, a:mainCfg,
+      select: {c:{g:'blogs.text'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -256,7 +265,7 @@ function setSettings(main, mainCfg){
           options: ['collapse', 'delete']
         }
       ]},
-      inputs: {c:{g:'blogs.title'}, a:mainCfg,
+      inputs: {c:{g:'blogs.text'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -273,7 +282,15 @@ function setSettings(main, mainCfg){
             label: 'Реагировать на отсутствие текста',
             name: 'react no text'
           }
-      ]}
+      ]},
+      liveList: {c:{g:'blogs.text'}, a:mainCfg,
+        list:[
+        {
+          type: 'str-value',
+          label: 'Regex фильтр текста',
+          name: 'words'
+        }]
+      }
     });
 
     new Field({
