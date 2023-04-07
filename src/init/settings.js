@@ -157,6 +157,7 @@ function setSettings(main, mainCfg){
       liveList: {c:{g:'subsites.title'}, a:mainCfg,
         list:[
         {
+          type: 'str-value',
           label: 'Title',
           name: 'words'
         }]
