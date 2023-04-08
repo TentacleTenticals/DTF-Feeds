@@ -8,15 +8,15 @@ let defaultSettings = {
     'my new': true,
     'subsites': true,
     'user pages': true,
-    'topics': true
-  },
-  'what to show in': {
-    'popular': 'subsites and blogs',
-    'new': 'subsites and blogs',
-    'my new': 'subsites and blogs',
-    'subsites': 'subsites and blogs',
-    'user pages': 'subsites and blogs',
-    'topics': 'subsites and blogs'
+    'topics': true,
+    'types to show': {
+      'popular': 'subsites and blogs',
+      'new': 'subsites and blogs',
+      'my new': 'subsites and blogs',
+      'subsites': 'subsites and blogs',
+      'user pages': 'subsites and blogs',
+      'topics': 'subsites and blogs'
+    },
   },
   'what to group': {
     'subsites': true,
