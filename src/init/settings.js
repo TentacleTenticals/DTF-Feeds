@@ -59,12 +59,12 @@ function setSettings(main, mainCfg){
 
       new Field({
         path: main,
-        groupName: 'what to show in',
+        groupName: 'where to react',
         cName: 'grid',
         legend: 'Что показывать',
         info: 'Бла бла бла',
         rtn: [],
-        select: {c:true, a:mainCfg,
+        select: {c:{g:'types to show'}, a:mainCfg,
           list:[
             {
               label: 'Популярное',
