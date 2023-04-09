@@ -11,7 +11,7 @@ function setSettings(main, mainCfg){
           {
             label: 'Тип действия',
             name: 'type',
-            options: ['panel', 'obs']
+            options: [['panel', 'панель'], ['obs', 'обсервер']]
           }
       ]}
     });
@@ -69,32 +69,32 @@ function setSettings(main, mainCfg){
             {
               label: 'Популярное',
               name: 'popular',
-              options: ['подсайты', 'блоги', 'подсайты и блоги']
+              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
             },
             {
               label: 'Новое',
               name: 'new',
-              options: ['подсайты', 'блоги', 'подсайты и блоги']
+              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
             },
             {
               label: 'Моё новое',
               name: 'my new',
-              options: ['подсайты', 'блоги', 'подсайты и блоги']
+              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
             },
             {
               label: 'Подсайты',
               name: 'subsites',
-              options: ['подсайты', 'блоги', 'подсайты и блоги']
+              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
             },
             {
               label: 'Страницы пользователей',
               name: 'user pages',
-              options: ['подсайты', 'блоги', 'подсайты и блоги']
+              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
             },
             {
               label: 'Статьи',
               name: 'topics',
-              options: ['подсайты', 'блоги', 'подсайты и блоги']
+              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
             }
         ]}
       });
@@ -133,7 +133,7 @@ function setSettings(main, mainCfg){
         {
           label: 'Действие',
           name: 'action',
-          options: ['свернуть', 'удалить']
+          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'subsites.title'}, a:mainCfg,
@@ -176,7 +176,7 @@ function setSettings(main, mainCfg){
         {
           label: 'Действие',
           name: 'action',
-          options: ['свернуть', 'удалить']
+          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'subsites.text'}, a:mainCfg,
@@ -219,7 +219,7 @@ function setSettings(main, mainCfg){
         {
           label: 'Действие',
           name: 'action',
-          options: ['свернуть', 'удалить']
+          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'blogs.title'}, a:mainCfg,
@@ -262,7 +262,7 @@ function setSettings(main, mainCfg){
         {
           label: 'Действие',
           name: 'action',
-          options: ['свернуть', 'удалить']
+          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'blogs.text'}, a:mainCfg,
@@ -305,7 +305,7 @@ function setSettings(main, mainCfg){
         {
           label: 'Действие',
           name: 'action',
-          options: ['свернуть', 'удалить']
+          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'ignored.feeds'}, a:mainCfg,
@@ -330,7 +330,7 @@ function setSettings(main, mainCfg){
         {
           label: 'Действие',
           name: 'action',
-          options: ['свернуть', 'удалить']
+          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'ignored.subsites'}, a:mainCfg,
@@ -355,7 +355,7 @@ function setSettings(main, mainCfg){
         {
           label: 'Действие',
           name: 'action',
-          options: ['свернуть', 'удалить']
+          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'ignored.authors'}, a:mainCfg,
@@ -380,7 +380,7 @@ function setSettings(main, mainCfg){
         {
           label: 'Действие',
           name: 'action',
-          options: ['свернуть', 'удалить']
+          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'watched.feeds'}, a:mainCfg,
