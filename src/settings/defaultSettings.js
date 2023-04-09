@@ -10,12 +10,12 @@ let defaultSettings = {
     'user pages': true,
     'topics': true,
     'types to show': {
-      'popular': 'subsites and blogs',
-      'new': 'subsites and blogs',
-      'my new': 'subsites and blogs',
-      'subsites': 'subsites and blogs',
-      'user pages': 'subsites and blogs',
-      'topics': 'subsites and blogs'
+      'popular': 'подсайты и блоги',
+      'new': 'подсайты и блоги',
+      'my new': 'подсайты и блоги',
+      'subsites': 'подсайты и блоги',
+      'user pages': 'подсайты и блоги',
+      'topics': 'подсайты и блоги'
     },
   },
   'what to group': {
@@ -25,35 +25,35 @@ let defaultSettings = {
   'filters': {
     'ignored': {
       'feeds': {
-        'action': 'collapse',
+        'action': 'свернуть',
         'color': ''
       },
       'authors': {
-        'action': 'collapse',
+        'action': 'свернуть',
         'color': ''
       },
       'subsites': {
-        'action': 'collapse',
+        'action': 'свернуть',
         'color': ''
       }
     },
     'watched': {
       'feeds': {
-        'action': 'collapse',
+        'action': 'свернуть',
         'color': ''
       }
     },
     'subsites': {
       'title': {
         'active': true,
-        'action': 'collapse',
+        'action': 'свернуть',
         'react text': true,
         'react no text': true,
-        'words': ['testWord']
+        'words': []
       },
       'text': {
         'active': true,
-        'action': 'collapse',
+        'action': 'свернуть',
         'react text': true,
         'react no text': true,
         'words': []
@@ -62,14 +62,14 @@ let defaultSettings = {
     'blogs': {
       'title': {
         'active': true,
-        'action': 'collapse',
+        'action': 'свернуть',
         'react text': true,
         'react no text': true,
         'words': []
       },
       'text': {
         'active': true,
-        'action': 'collapse',
+        'action': 'свернуть',
         'react text': true,
         'react no text': true,
         'words': []
