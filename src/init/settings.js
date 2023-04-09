@@ -41,6 +41,11 @@ function setSettings(main, mainCfg){
           },
           {
             type: 'checkbox',
+            label: 'Закладки',
+            name: 'bookmarks'
+          },
+          {
+            type: 'checkbox',
             label: 'Подсайты',
             name: 'subsites'
           },
@@ -79,6 +84,11 @@ function setSettings(main, mainCfg){
             {
               label: 'Моё новое',
               name: 'my new',
+              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
+            },
+            {
+              label: 'Закладки',
+              name: 'bookmarks',
               options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
             },
             {
