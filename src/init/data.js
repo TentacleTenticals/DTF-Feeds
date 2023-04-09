@@ -1,4 +1,4 @@
-function setData(main, mainCfg){
+initMenu.setData = (main, mainCfg) => {
     new Field({
       path: main,
       groupName: 'script data',
