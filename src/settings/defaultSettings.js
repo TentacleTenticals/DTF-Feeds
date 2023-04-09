@@ -79,12 +79,18 @@ let defaultSettings = {
     },
   },
   'script data': {
-    'watched feeds': [],
-    'ignored feeds': [],
-    'favorite authors': [],
-    'ignored authors': [],
-    'ignored subsites': [],
-    'favorite subsites': []
+    'ignored': {
+      'subsites': [],
+      'authors': [],
+      'feeds': []
+    },
+    'favorite': {
+      'subsites': [],
+      'authors': []
+    },
+    'watched': {
+      'feeds': []
+    }
   },
   'scriptInfo': {
     scriptName: 'DTF markdown',
