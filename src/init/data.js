@@ -10,8 +10,18 @@ initMenu.setData = (main, mainCfg) => {
         list:[
         {
           type: 'string',
-          label: 'Список',
+          label: 'Подсайты',
           name: 'subsites'
+        },
+        {
+          type: 'string',
+          label: 'Авторы',
+          name: 'authors'
+        },
+        {
+          type: 'string',
+          label: 'Фиды',
+          name: 'feeds'
         }]
       }
     });
