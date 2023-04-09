@@ -6,18 +6,18 @@ let defaultSettings = {
     'popular': true,
     'new': true,
     'my new': true,
+    'bookmarks': false,
     'subsites': true,
     'user pages': true,
     'topics': true,
-    'bookmarks': true,
     'types to show': {
       'popular': 'subsites and blogs',
       'new': 'subsites and blogs',
       'my new': 'subsites and blogs',
+      'bookmarks': 'subsites and blogs',
       'subsites': 'subsites and blogs',
       'user pages': 'subsites and blogs',
-      'topics': 'subsites and blogs',
-      'bookmarks': 'subsites and blogs'
+      'topics': 'subsites and blogs'
     },
   },
   'what to group': {
