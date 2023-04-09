@@ -93,9 +93,9 @@ let defaultSettings = {
     }
   },
   'scriptInfo': {
-    scriptName: 'DTF Feeds',
-    scriptId: 'dtf-feeds',
+    scriptName: 'DTF-Feeds',
+    scriptId: 'dtf feeds',
     storeName: 'DTF-Feeds',
-    storeDesc: 'Скрипт для расширения возможностей, десу!'
+    storeDesc: 'Скрипт для улучшенного управления фидами.'
   }
 }
