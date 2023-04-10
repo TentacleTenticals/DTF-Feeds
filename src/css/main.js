@@ -247,7 +247,7 @@ const mainCSS = `
 .dtf-feedGroups .feed__item.l-island-round:is(
 .favoriteSubsite, .ignoredSubsite,
 .favoriteAuthor, .ignoredAuthor
-):nth-child(1)::before {
+)>:nth-child(1)::before {
   display: block;
   width: max-content;
   position: absolute;
@@ -262,7 +262,7 @@ const mainCSS = `
 
 .dtf-feedGroups .feed__item.l-island-round:is(
 .watchedFeed, .ignoredFeed
-):nth-child(1)::after {
+)>:nth-child(1)::after {
   display: block;
   width: 100%;
   position: absolute;
@@ -300,10 +300,10 @@ const mainCSS = `
 }
 
 
-.dtf-feedGroups .feed__item.l-island-round.watchedFeed:nth-child(1)::after {
+.dtf-feedGroups .feed__item.l-island-round.watchedFeed>:nth-child(1)::after {
   content: 'ФИД ПРОСМОТРЕН ✔️';
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredFeed:nth-child(1)::after {
+.dtf-feedGroups .feed__item.l-island-round.ignoredFeed>:nth-child(1)::after {
   content: 'ФИД ИГНОРИРУЕТСЯ 🚫';
 }
 
@@ -350,28 +350,28 @@ const mainCSS = `
   font-weight: 500;
 }
 
-.dtf-feedGroups .feed__item.l-island-round.ignoredSubsite.ignoredAuthor:nth-child(1)::before {
+.dtf-feedGroups .feed__item.l-island-round.ignoredSubsite.ignoredAuthor>:nth-child(1)::before {
   content: 'ПОДСАЙТ И АВТОР 💢';
 }
-.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite.favoriteAuthor:nth-child(1)::before {
+.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite.favoriteAuthor>:nth-child(1)::before {
   content: 'ПОДСАЙТ И АВТОР 💘';
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredSubsite.favoriteAuthor:nth-child(1)::before {
+.dtf-feedGroups .feed__item.l-island-round.ignoredSubsite.favoriteAuthor>:nth-child(1)::before {
   content: 'ПОДСАЙТ 💢, АВТОР 💘';
 }
-.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite.ignoredAuthor:nth-child(1)::before {
+.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite.ignoredAuthor>:nth-child(1)::before {
   content: 'ПОДСАЙТ 💘, АВТОР 💢';
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredSubsite:nth-child(1)::before {
+.dtf-feedGroups .feed__item.l-island-round.ignoredSubsite>:nth-child(1)::before {
   content: 'ПОДСАЙТ 💢';
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredAuthor:nth-child(1)::before {
+.dtf-feedGroups .feed__item.l-island-round.ignoredAuthor>:nth-child(1)::before {
   content: 'АВТОР 💢';
 }
-.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite:nth-child(1)::before {
+.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite>:nth-child(1)::before {
   content: 'ПОДСАЙТ 💘';
 }
-.dtf-feedGroups .feed__item.l-island-round.favoriteAuthor:nth-child(1)::before {
+.dtf-feedGroups .feed__item.l-island-round.favoriteAuthor>:nth-child(1)::before {
   content: 'АВТОР 💘';
 }
 
