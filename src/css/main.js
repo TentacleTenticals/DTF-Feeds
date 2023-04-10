@@ -253,6 +253,14 @@ const mainCSS = `
   z-index: 0;
 }
 
+.dtf-feedGroups .subGroup:is(.ignoredSubsite, .ignoredAuthor,
+.favoriteSubsite, .favoriteAuthor) .panel::after {
+  display: inline;
+  position: relative;
+  font-size: 11px;
+  top: -2px;
+}
+
 .dtf-feedGroups .feed__item.l-island-round:is(
 .favoriteSubsite, .ignoredSubsite,
 .favoriteAuthor, .ignoredAuthor
@@ -344,10 +352,19 @@ const mainCSS = `
   font-weight: 500;
 }
 
-
-.dtf-feedGroups .subGroup.favoriteSubsite::after {
-  content: 'ИЗБРАННЫЙ ПОДСАЙТ 💘';
+.dtf-feedGroups .subGroup.ignoredSubsite.ignoredAuthor .panel::after {
+  content: 'ПОДСАЙТ И АВТОР 💢';
 }
+.dtf-feedGroups .subGroup.favoriteSubsite.favoriteAuthor .panel::after {
+  content: 'ПОДСАЙТ И АВТОР 💘';
+}
+.dtf-feedGroups .subGroup.favoriteSubsite.ignoredAuthor .panel::after {
+  content: 'ПОДСАЙТ 💘, АВТОР 💢';
+}
+.dtf-feedGroups .subGroup.ignoredSubsite.favoriteAuthor .panel::after {
+  content: 'ПОДСАЙТ 💢, АВТОР 💘';
+}
+
 .dtf-feed-group .subGroup.favoriteSubsite .panel .title {
   color: rgb(0 0 0);
 }
