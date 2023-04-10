@@ -351,7 +351,7 @@ const mainCSS = `
   font-weight: 500;
 }
 .dtf-feedGroups .feed__item.l-island-round.ignoredAuthor::after {
-  content: 'ИГНОРИРУЕМЫЙ АВТОР 🚫';
+  content: 'АВТОР 💢';
 }
 
 
@@ -421,31 +421,30 @@ const mainCSS = `
   color: rgb(195 112 154);
 }
 
+.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedNoText::after {
+  content: 'Блог ⛔ - заголовок и текст ⦰';
+}
+.dtf-feedGroups .feed__item.l-island-round.blogBlockedTitle.blogBlockedText::after {
+  content: 'Блог ⛔ - заголовок и текст ✗';
+}
+.dtf-feedGroups .feed__item.l-island-round.blogBlockedTitle.blogBlockedNoText::after {
+  content: 'Блог ⛔ - заголовок ✗, текст ⦰';
+}
+.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedText::after {
+  content: 'Блог ⛔ - заголовок ⦰, текст ✗';
+}
 
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle::after {
-  content: '⛔ Блог скрыт фильтром, нет заголовка ⛔';
+.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle.subsiteBlockedNoText::after {
+  content: 'Статья ⛔ - заголовок и текст ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedTitle::after {
-  content: '⛔ Блог скрыт фильтром, запрещённый текст в заголовке ⛔';
+.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedTitle.subsiteBlockedText::after {
+  content: 'Статья ⛔ - заголовок и текст ✗';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle::after {
-  content: '⛔ Статья скрыта фильтром, нет заголовка ⛔';
+.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedTitle.subsiteBlockedNoText::after {
+  content: 'Статья ⛔ - заголовок ✗, текст ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedTitle::after {
-  content: '⛔ Статья скрыта фильтром, запрещённый текст в заголовке ⛔';
-}
-
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoText::after {
-  content: '⛔ Блог скрыт фильтром, нет текста ⛔';
-}
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedText::after {
-  content: '⛔ Блог скрыт фильтром, запрещённый текст ⛔';
-}
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoText::after {
-  content: '⛔ Статья скрыта фильтром, нет текста ⛔';
-}
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedText::after {
-  content: '⛔ Статья скрыта фильтром, запрещённый текст ⛔';
+.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle.subsiteBlockedText::after {
+  content: 'Статья ⛔ - заголовок ⦰, текст ✗';
 }
 
 .layout__right-column>:nth-child(1)>:nth-child(1)>:nth-child(2)>:nth-child(1)>:nth-child(2) .commentBlockedLink {
