@@ -51,14 +51,14 @@ let defaultSettings = {
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': []
+        'words': ['']
       },
       'text': {
         'active': true,
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': []
+        'words': ['']
       }
     },
     'blogs': {
@@ -67,29 +67,29 @@ let defaultSettings = {
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': []
+        'words': ['']
       },
       'text': {
         'active': true,
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': []
+        'words': ['']
       }
     },
   },
   'script data': {
     'ignored': {
-      'subsites': [],
-      'authors': [],
-      'feeds': []
+      'subsites': [''],
+      'authors': [''],
+      'feeds': ['']
     },
     'favorite': {
-      'subsites': [],
-      'authors': []
+      'subsites': [''],
+      'authors': ['']
     },
     'watched': {
-      'feeds': []
+      'feeds': ['']
     }
   },
   'scriptInfo': {
