@@ -364,6 +364,18 @@ const mainCSS = `
 .dtf-feedGroups .subGroup.ignoredSubsite.favoriteAuthor .panel::after {
   content: 'ПОДСАЙТ 💢, АВТОР 💘';
 }
+.dtf-feedGroups .subGroup.ignoredSubsite .panel::after {
+  content: 'ПОДСАЙТ 💢';
+}
+.dtf-feedGroups .subGroup.ignoredAuthor .panel::after {
+  content: 'АВТОР 💢';
+}
+.dtf-feedGroups .subGroup.favoriteSubsite .panel::after {
+  content: 'ПОДСАЙТ 💘';
+}
+.dtf-feedGroups .subGroup.favoriteAuthor .panel::after {
+  content: 'АВТОР 💘';
+}
 
 .dtf-feed-group .subGroup.favoriteSubsite .panel .title {
   color: rgb(0 0 0);
