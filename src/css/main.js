@@ -1,4 +1,13 @@
 const mainCSS = `
+.dtf-feedGroups .content-header-repost {
+  position: absolute;
+  left: 0px;
+  margin: 0;
+  padding: 18px 0 0 0px;
+  width: max-content;
+  font-size: 0;
+}
+
 :is(.dtf-feedGroups, .dtf-feedGroups.obs) {
   display: flex;
   flex-direction: column;
