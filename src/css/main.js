@@ -245,8 +245,9 @@ const mainCSS = `
 }
 
 .dtf-feedGroups .feed__item.l-island-round:is(
-.favoriteSubsite, .ignoredSubsite
-)::before {
+.favoriteSubsite, .ignoredSubsite,
+.favoriteAuthor, .ignoredAuthor
+):nth-child(1)::before {
   display: block;
   width: max-content;
   position: absolute;
@@ -260,23 +261,8 @@ const mainCSS = `
 }
 
 .dtf-feedGroups .feed__item.l-island-round:is(
-.favoriteAuthor, .ignoredAuthor
-)::after {
-  display: block;
-  width: 100%;
-  position: absolute;
-  color: rgb(108 108 108);
-  font-size: 11px;
-  font-weight: 600;
-  top: 3px;
-  right: 3px;
-  text-align: right;
-  z-index: 0;
-}
-
-.dtf-feedGroups .feed__item.l-island-round:is(
 .watchedFeed, .ignoredFeed
-)>:nth-child(1)::after {
+):nth-child(1)::after {
   display: block;
   width: 100%;
   position: absolute;
@@ -314,10 +300,10 @@ const mainCSS = `
 }
 
 
-.dtf-feedGroups .feed__item.l-island-round.watchedFeed>:nth-child(1)::after {
+.dtf-feedGroups .feed__item.l-island-round.watchedFeed:nth-child(1)::after {
   content: 'ФИД ПРОСМОТРЕН ✔️';
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredFeed>:nth-child(1)::after {
+.dtf-feedGroups .feed__item.l-island-round.ignoredFeed:nth-child(1)::after {
   content: 'ФИД ИГНОРИРУЕТСЯ 🚫';
 }
 
@@ -336,8 +322,8 @@ const mainCSS = `
   background-color: rgb(243 160 208);
   font-weight: 500;
 }
-.dtf-feedGroups :is(.feed__item.l-island-round, .subGroup).favoriteAuthor::after {
-  content: 'ИЗБРАННЫЙ АВТОР 💘';
+.dtf-feedGroups .feed__item.l-island-round.favoriteAuthor:nth-child(1)::after {
+  content: 'АВТОР 💘';
 }
 
 .dtf-feedGroups .feed__item.l-island-round.ignoredAuthor>:nth-child(1) {
@@ -350,7 +336,7 @@ const mainCSS = `
   background-color: rgb(243 160 208);
   font-weight: 500;
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredAuthor::after {
+.dtf-feedGroups .feed__item.l-island-round.ignoredAuthor:nth-child(1)::after {
   content: 'АВТОР 💢';
 }
 
@@ -368,8 +354,15 @@ const mainCSS = `
   background-color: rgb(243 160 208);
   font-weight: 500;
 }
-.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite::before {
-  content: 'ИЗБРАННЫЙ ПОДСАЙТ 💘';
+
+.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite.favoriteAuthor:nth-child(1)::before {
+  content: 'ПОДСАЙТ И АВТОР 💘';
+}
+.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite:nth-child(1)::before {
+  content: 'ПОДСАЙТ 💘';
+}
+.dtf-feedGroups .feed__item.l-island-roundfavoriteAuthor:nth-child(1)::before {
+  content: 'АВТОР 💘';
 }
 
 
