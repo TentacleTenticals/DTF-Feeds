@@ -266,7 +266,7 @@ const mainCSS = `
   display: block;
   width: 100%;
   position: absolute;
-  color: rgb(108 108 108);
+  color: rgb(50 50 50);
   font-size: 13px;
   font-weight: 600;
   top: 3px;
