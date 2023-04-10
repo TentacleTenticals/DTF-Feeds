@@ -78,13 +78,13 @@ const mainCSS = `
 }
 .dtf-feed-group .groupHeader :is(.title, .num, newMark) {
   display: inline-block;
+  background-color: rgb(0 0 0);
 }
 .dtf-feed-group .groupHeader .title {
   font-weight: 600;
   color: rgb(101 215 168);
 }
 .dtf-feed-group .groupHeader .num {
-  background-color: rgb(0 0 0);
   color: rgb(255 255 255);
   box-shadow: 0px 0px 4px 1px rgb(101 215 168);
 }
@@ -118,7 +118,6 @@ const mainCSS = `
 .dtf-feed-group .num {
   margin-left: 5px;
   color: rgb(255 255 255);
-  background-color: rgb(0 0 0);
   padding: 1px 3.5px 0px 3.5px;
   border-radius: 50%;
   font-size: 12px;
@@ -457,9 +456,6 @@ const mainCSS = `
 .dtf-feed-group .subGroup.ignoredAuthor {
   background-color: rgb(78 28 52);
   box-shadow: 0px 0px 2px 0px rgb(0 0 0);
-}
-.dtf-feed-group .subGroup.ignoredAuthor .title {
-  color: rgb(195 112 154);
 }
 
 .dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedNoText::after {
