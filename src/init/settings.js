@@ -168,6 +168,7 @@ initMenu.setSettings = (main, mainCfg) => {
         list:[
         {
           type: 'string',
+          edit: true,
           label: 'Regex фильтр заголовков',
           name: 'words'
         }]
@@ -211,6 +212,7 @@ initMenu.setSettings = (main, mainCfg) => {
         list:[
         {
           type: 'string',
+          edit: true,
           label: 'Regex фильтр текста',
           name: 'words'
         }]
@@ -254,6 +256,7 @@ initMenu.setSettings = (main, mainCfg) => {
         list:[
         {
           type: 'string',
+          edit: true,
           label: 'Regex фильтр заголовков',
           name: 'words'
         }]
@@ -297,6 +300,7 @@ initMenu.setSettings = (main, mainCfg) => {
         list:[
         {
           type: 'string',
+          edit: true,
           label: 'Regex фильтр текста',
           name: 'words'
         }]
