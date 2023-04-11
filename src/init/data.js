@@ -31,7 +31,8 @@ initMenu.setData = (main, mainCfg) => {
                       alert(value.authorID);
                   }
               })
-          }
+          },
+          clearList: true
         },
         {
           type: 'object',
