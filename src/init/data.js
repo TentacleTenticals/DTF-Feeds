@@ -25,6 +25,7 @@ initMenu.setData = (main, mainCfg) => {
           buttons: (e, value) => {
               new Button({
                   path: e,
+                  cName: 'btn',
                   text: 'q',
                   onclick: () => {
                       alert(value.authorID);
