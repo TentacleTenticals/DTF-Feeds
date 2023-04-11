@@ -9,17 +9,17 @@ initMenu.setData = (main, mainCfg) => {
       liveList: {c:{g:'ignored'}, a:mainCfg,
         list:[
         {
-          type: 'string',
+          type: 'object',
           label: 'Подсайты',
           name: 'subsites'
         },
         {
-          type: 'string',
+          type: 'object',
           label: 'Авторы',
           name: 'authors'
         },
         {
-          type: 'string',
+          type: 'object',
           label: 'Фиды',
           name: 'feeds'
         }]
