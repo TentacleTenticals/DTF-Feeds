@@ -21,6 +21,15 @@ initMenu.setData = (main, mainCfg) => {
               return `Name: ${e.author},
               ID: ${e.authorID},
               Type: ${e.authorType}`
+          },
+          buttons: (e, value) => {
+              new Button({
+                  path: e,
+                  text: 'q',
+                  onclick: () => {
+                      alert(value.authorID);
+                  }
+              })
           }
         },
         {
