@@ -17,6 +17,7 @@ initMenu.setData = (main, mainCfg) => {
           type: 'object',
           label: 'Авторы',
           name: 'authors',
+          cName: 'vertical',
           view: (e) => {
               return `Name: ${e.author},
               ID: ${e.authorID},
