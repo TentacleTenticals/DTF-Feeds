@@ -99,7 +99,7 @@ const mainCSS = `
   border-radius: 50%;
   display: inline-flex;
   overflow: hidden;
-  box-shadow: 0px 0px 3px 0px rgb(0 0 0);
+  box-shadow: 0px 0px 2px 1px rgb(0 0 0), 0px 0px 2px 1px rgb(255 255 255);
 }
 .dtf-feed-group .panel .ico {
   margin: auto;
