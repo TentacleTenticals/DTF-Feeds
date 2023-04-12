@@ -27,11 +27,13 @@ initMenu.setData = (main, mainCfg) => {
           name: 'subsites',
           cName: 'vertical',
           view: (e) => {
+              if(!e) return;
               return `📛: ${e.author},
               🆔: ${e.authorID},
               ❓: ${e.authorType}`
           },
           buttons: (e, v) => {
+              if(!e) return;
               new Button({
                   path: e,
                   cName: 'btn',
@@ -49,11 +51,13 @@ initMenu.setData = (main, mainCfg) => {
           name: 'authors',
           cName: 'vertical',
           view: (e) => {
+              if(!e) return;
               return `📛: ${e.author},
               🆔: ${e.authorID},
               ❓: ${e.authorType}`
           },
           buttons: (e, value) => {
+              if(!e) return;
               new Button({
                   path: e,
                   cName: 'btn',
@@ -71,6 +75,7 @@ initMenu.setData = (main, mainCfg) => {
           name: 'feeds',
           cName: 'vertical',
           view: (e) => {
+              if(!e) return;
               return `📰🆔: ${e.feedID};
               📰📜 ${e.feedTitle};
               📛: ${e.author};
@@ -79,6 +84,7 @@ initMenu.setData = (main, mainCfg) => {
               📅: ${e.date};`
           },
           buttons: (e, value) => {
+              if(!e) return;
               new Button({
                   path: e,
                   cName: 'btn',
