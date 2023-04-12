@@ -23,6 +23,7 @@ initMenu.setData = (main, mainCfg) => {
         list:[
         {
           type: 'object',
+          mode: 'view-del',
           label: 'Подсайты',
           name: 'subsites',
           cName: 'vertical',
@@ -47,6 +48,7 @@ initMenu.setData = (main, mainCfg) => {
         },
         {
           type: 'object',
+          mode: 'view-del',
           label: 'Авторы',
           name: 'authors',
           cName: 'vertical',
@@ -56,7 +58,7 @@ initMenu.setData = (main, mainCfg) => {
               🆔: ${e.authorID},
               ❓: ${e.authorType}`
           },
-          buttons: (e, value) => {
+          buttons: (e, v) => {
               if(!e) return;
               new Button({
                   path: e,
@@ -71,6 +73,7 @@ initMenu.setData = (main, mainCfg) => {
         },
         {
           type: 'object',
+          mode: 'view-del',
           label: 'Фиды',
           name: 'feeds',
           cName: 'vertical',
@@ -83,7 +86,7 @@ initMenu.setData = (main, mainCfg) => {
               ❓: ${e.authorType};
               📅: ${e.date};`
           },
-          buttons: (e, value) => {
+          buttons: (e, v) => {
               if(!e) return;
               new Button({
                   path: e,
