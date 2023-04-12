@@ -1,4 +1,17 @@
 initMenu.setData = (main, mainCfg) => {
+    function linkOpener(i){
+      window.open(`https://dtf.ru/${(() => {
+        if(i.authorType.match(/User$/)){
+          return `u/${i.authorType.match(/User$/) ? `${i.authorID}/${i.feedID}` : `${i.authorID}/${i.feedID}`}`;
+        }else
+        if(i.authorType.match(/Official subsite|User subsite/)){
+          return `s /${i.authorType.match(/Official subsite|User subsite/) ? `${i.authorID}/${i.feedID}` : `${i.authorID}/${i.feedID}`}`;
+        }else
+        if(i.authorType.match(/DTF Subsite/)){
+          return i.authorID;
+        }
+      })()}`, '_blank').focus();
+    }
     new Field({
       path: main,
       groupName: 'script data',
@@ -11,7 +24,24 @@ initMenu.setData = (main, mainCfg) => {
         {
           type: 'object',
           label: 'Подсайты',
-          name: 'subsites'
+          name: 'subsites',
+          cName: 'vertical',
+          view: (e) => {
+              return `📛: ${e.author},
+              🆔: ${e.authorID},
+              ❓: ${e.authorType}`
+          },
+          buttons: (e, v) => {
+              new Button({
+                  path: e,
+                  cName: 'btn',
+                  text: 'q',
+                  onclick: () => {
+                      linkOpener(v);
+                  }
+              })
+          },
+          clearList: true
         },
         {
           type: 'object',
@@ -19,9 +49,9 @@ initMenu.setData = (main, mainCfg) => {
           name: 'authors',
           cName: 'vertical',
           view: (e) => {
-              return `Name: ${e.author},
-              ID: ${e.authorID},
-              Type: ${e.authorType}`
+              return `📛: ${e.author},
+              🆔: ${e.authorID},
+              ❓: ${e.authorType}`
           },
           buttons: (e, value) => {
               new Button({
@@ -29,7 +59,7 @@ initMenu.setData = (main, mainCfg) => {
                   cName: 'btn',
                   text: 'q',
                   onclick: () => {
-                      alert(value.authorID);
+                      linkOpener(v);
                   }
               })
           },
@@ -38,7 +68,27 @@ initMenu.setData = (main, mainCfg) => {
         {
           type: 'object',
           label: 'Фиды',
-          name: 'feeds'
+          name: 'feeds',
+          cName: 'vertical',
+          view: (e) => {
+              return `📰🆔: ${e.feedID};
+              📰📜 ${e.feedTitle};
+              📛: ${e.author};
+              🆔: ${e.authorID};
+              ❓: ${e.authorType};
+              📅: ${e.date};`
+          },
+          buttons: (e, value) => {
+              new Button({
+                  path: e,
+                  cName: 'btn',
+                  text: 'q',
+                  onclick: () => {
+                      linkOpener(v);
+                  }
+              })
+          },
+          clearList: true
         }]
       }
     });
