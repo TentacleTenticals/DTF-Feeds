@@ -302,7 +302,10 @@ const mainCSS = `
   z-index: 0;
 }
 
-.dtf-feedGroups :is(.blogBlockedNoTitle, .blogBlockedTitle, .subsiteBlockedNoTitle, .subsiteBlockedTitle)::after {
+.dtf-feedGroups :is(.blogBlockedNoTitle, .blogBlockedTitle,
+.blogBlockedNoText, .blogBlockedText,
+.subsiteBlockedNoTitle, .subsiteBlockedTitle,
+.subsiteBlockedNoText, .subsiteBlockedText)::after {
   display: block;
   text-align: center !important;
   color: rgb(108 108 108);
@@ -471,6 +474,18 @@ const mainCSS = `
 .dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedText::after {
   content: 'Блог ⛔ - заголовок ⦰, текст ✗';
 }
+.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle::after {
+  content: 'Блог ⛔ - заголовок ⦰';
+}
+.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoText::after {
+  content: 'Блог ⛔ - текст ⦰';
+}
+.dtf-feedGroups .feed__item.l-island-round.blogBlockedTitle::after {
+  content: 'Блог ⛔ - текст ✗';
+}
+.dtf-feedGroups .feed__item.l-island-round.blogBlockedText::after {
+  content: 'Блог ⛔ - текст ✗';
+}
 
 .dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle.subsiteBlockedNoText::after {
   content: 'Статья ⛔ - заголовок и текст ⦰';
@@ -483,6 +498,18 @@ const mainCSS = `
 }
 .dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle.subsiteBlockedText::after {
   content: 'Статья ⛔ - заголовок ⦰, текст ✗';
+}
+.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle::after {
+  content: 'Статья ⛔ - заголовок ⦰';
+}
+.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoText::after {
+  content: 'Статья ⛔ - текст ⦰';
+}
+.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedTitle::after {
+  content: 'Статья ⛔ - текст ✗';
+}
+.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedText::after {
+  content: 'Статья ⛔ - текст ✗';
 }
 
 .layout__right-column>:nth-child(1)>:nth-child(1)>:nth-child(2)>:nth-child(1)>:nth-child(2) .commentBlockedLink {
