@@ -108,6 +108,7 @@ const mainCSS = `
 }
 .dtf-feed-group .panel :is(.title, .num, .newMark) {
   display: inline-block;
+  background-color: rgb(0 0 0);
   overflow: hidden;
   margin: 0px 5px -1px 0px;
 }
