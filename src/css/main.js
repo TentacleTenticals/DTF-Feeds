@@ -124,7 +124,7 @@ const mainCSS = `
   font-size: 12px;
   font-weight: 600;
   line-height: 12px;
-  box-shadow: 0px 0px 4px 1px rgb(255 255 255);
+  box-shadow: 0px 0px 2px 1px rgb(255 255 255);
 }
 
 :is(.dtf-feed-group, .dtf-feed-group .subList)::-webkit-scrollbar {
