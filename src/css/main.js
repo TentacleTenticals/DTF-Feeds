@@ -328,6 +328,7 @@ const mainCSS = (cfg) => `
 
 .dtf-feed-group .subGroup:is(.favoriteSubsite, .favoriteAuthor) {
   background-color: rgb(209 144 175);
+  background-image: repeating-linear-gradient(45deg, black 50%, transparent);
 }
 .dtf-feedGroups .feed__item.l-island-round:is(.favoriteSubsite, .favoriteAuthor) .content-header {
   background-color: rgb(209 144 175);
@@ -450,6 +451,7 @@ const mainCSS = (cfg) => `
 
 .dtf-feed-group .subGroup:is(.ignoredSubsite, .ignoredAuthor, .ignoredFeed) {
   background-color: rgb(78 28 52);
+  background-image: repeating-linear-gradient(45deg, black 50%, transparent);
 }
 
 .dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedNoText::after {
