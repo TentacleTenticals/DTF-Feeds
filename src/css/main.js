@@ -331,13 +331,12 @@ const mainCSS = (cfg) => `
   content: 'ФИД ИГНОРИРУЕТСЯ 🚫';
 }
 
-
 .dtf-feed-group .subGroup:is(.favoriteSubsite, .favoriteAuthor) {
-  background-color: rgb(144 209 172);
+  background-color: rgb(209 144 175);
   box-shadow: 0px 0px 3px 1px rgb(50 50 50);
 }
-.dtf-feedGroups .feed__item.l-island-round.favoriteAuthor .content-header {
-  background-color: rgb(209 144 205);
+.dtf-feedGroups .feed__item.l-island-round:is(.favoriteSubsite, .favoriteAuthor) .content-header {
+  background-color: rgb(209 144 175);
 }
 .dtf-feedGroups .feed__item.l-island-round.favoriteAuthor .favoriteAuthor.btn {
   background-color: rgb(243 160 208);
