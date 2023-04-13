@@ -563,9 +563,11 @@ const mainCSS = (cfg) => `
 .video-cont {
   display: inline-flex;
   position: relative;
+  margin: auto;
   max-width: ${cfg['feeds']['attachments']['size']['video']}px;
   max-height: ${cfg['feeds']['attachments']['size']['video']}px;
   box-shadow: 0px 0px 3px 1px rgb(0 0 0);
+  z-index: 10;
   cursor: pointer;
 }
 .video-cont video {
