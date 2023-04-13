@@ -109,8 +109,10 @@ const mainCSS = (cfg) => `
 .dtf-feed-group .panel :is(.title, .num, .newMark) {
   display: inline-block;
   background-color: rgb(0 0 0);
-  overflow: hidden;
   margin: 0px 5px -1px 0px;
+  padding: 0 2px 0 2px;
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 .dtf-feed-group .panel .title {
@@ -253,11 +255,13 @@ const mainCSS = (cfg) => `
   z-index: 0;
 }
 
-.dtf-feedGroups .subGroup:is(.ignoredSubsite, .ignoredAuthor,
-.favoriteSubsite, .favoriteAuthor) .panel::after {
+.dtf-feedGroups .subGroup:is(.ignoredSubsite, .ignoredAuthor, .favoriteSubsite, .favoriteAuthor) .panel::after {
   display: inline;
   position: relative;
+  background-color: rgb(0 0 0);
+  padding: 0 2px 0 2px;
   font-size: 11px;
+  border-radius: 2px;
   top: -2px;
 }
 
@@ -332,9 +336,6 @@ const mainCSS = (cfg) => `
   background-color: rgb(144 209 172);
   box-shadow: 0px 0px 3px 1px rgb(50 50 50);
 }
-.dtf-feed-group .subGroup.favoriteAuthor .panel .title {
-  color: rgb(0 0 0);
-}
 .dtf-feedGroups .feed__item.l-island-round.favoriteAuthor .content-header {
   background-color: rgb(209 144 205);
 }
@@ -380,9 +381,6 @@ const mainCSS = (cfg) => `
   content: 'АВТОР 💘';
 }
 
-.dtf-feed-group .subGroup.favoriteSubsite .panel .title {
-  color: rgb(0 0 0);
-}
 .dtf-feedGroups .feed__item.l-island-round.favoriteSubsite .content-header {
   background-color: rgb(144 209 172);
 }
