@@ -560,21 +560,58 @@ const mainCSS = `
 
 
 
-:is(.DTF-video, .DTF-videoYT) {
-  display: flex;
-  max-width: 600px;
-  max-height: 400px;
-  margin: auto;
-}
-:not(.comment) :is(.DTF-video, .DTF-videoYT) :is(video, iframe) {
-  max-width: 600px;
+.video-cont {
+  display: inline-flex;
   position: relative;
+  max-width: ${cfg['feeds']['attachments']['size']['video']}px;
+  max-height: ${cfg['feeds']['attachments']['size']['video']}px;
+  box-shadow: 0px 0px 3px 1px rgb(0 0 0);
+  cursor: pointer;
+}
+.video-cont video {
+  max-width: inherit;
+  max-height: inherit;
   margin: auto;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 
-.dtf-feedGroups .v-subscribe-button__subscribe {
-  background-color: unset;
+.video-cont.playing .mediaStarter {
+  display: none;
+}
+
+.mediaStarter {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 40%);
+  position: absolute;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+}
+.mediaStarter .btn {
+  display: flex;
+  background-color: rgb(255 255 255);
+  margin: 0 auto;
+  height: 50%;
+  max-height: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top: calc(50% - 50% / 2); */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 4px 0px rgb(0 0 0);
+  z-index: 1;
+  /* cursor: pointer; */
+}
+.mediaStarter .btn img {
+  width: 35%;
+  margin: 0px 0px 0px 10%;
+}
+.video-cont:hover .mediaStarter .btn {
+  background-color: rgb(255 0 0);
 }
 `;
