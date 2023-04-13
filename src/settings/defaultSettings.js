@@ -26,7 +26,7 @@ const defaultSettings = {
         'video': 300
       }
     }
-  }
+  },
   'what to group': {
     'subsites': true,
     'blogs': true
