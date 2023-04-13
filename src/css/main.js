@@ -559,8 +559,10 @@ const mainCSS = (cfg) => `
 
 
 
-
-.video-cont {
+.dtf-feedGroups .cont {
+  display: flex;
+}
+.dtf-feedGroups .video-cont {
   display: inline-flex;
   position: relative;
   margin: auto;
@@ -570,17 +572,17 @@ const mainCSS = (cfg) => `
   z-index: 10;
   cursor: pointer;
 }
-.video-cont video {
+.dtf-feedGroups .video-cont video {
   max-width: inherit;
   max-height: inherit;
   margin: auto;
 }
 
-.video-cont.playing .mediaStarter {
+.dtf-feedGroups .video-cont.playing .mediaStarter {
   display: none;
 }
 
-.mediaStarter {
+.dtf-feedGroups .mediaStarter {
   display: flex;
   width: 100%;
   height: 100%;
@@ -591,7 +593,7 @@ const mainCSS = (cfg) => `
   z-index: 10;
   cursor: pointer;
 }
-.mediaStarter .btn {
+.dtf-feedGroups .mediaStarter .btn {
   display: flex;
   background-color: rgb(255 255 255);
   margin: 0 auto;
@@ -609,11 +611,11 @@ const mainCSS = (cfg) => `
   z-index: 1;
   /* cursor: pointer; */
 }
-.mediaStarter .btn img {
+.dtf-feedGroups .mediaStarter .btn img {
   width: 35%;
   margin: 0px 0px 0px 10%;
 }
-.video-cont:hover .mediaStarter .btn {
+.dtf-feedGroups .video-cont:hover .mediaStarter .btn {
   background-color: rgb(255 0 0);
 }
 `;
