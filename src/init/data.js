@@ -146,7 +146,7 @@ initMenu.setData = (main, mainCfg) => {
       legend: '💘 Избранные',
       info: 'Подсайты',
       rtn: [],
-      liveList: {c:{g:'favorites'}, a:mainCfg,
+      liveList: {c:{g:'favorite'}, a:mainCfg,
         list:[
         {
           type: 'object',
@@ -183,7 +183,7 @@ initMenu.setData = (main, mainCfg) => {
       legend: '💘 Избранные',
       info: 'Авторы',
       rtn: [],
-      liveList: {c:{g:'favorites'}, a:mainCfg,
+      liveList: {c:{g:'favorite'}, a:mainCfg,
         list:[
         {
           type: 'object',
@@ -220,7 +220,7 @@ initMenu.setData = (main, mainCfg) => {
 //       legend: '💘 Избранные',
 //       info: 'Фиды',
 //       rtn: [],
-//       liveList: {c:{g:'favorites'}, a:mainCfg,
+//       liveList: {c:{g:'favorite'}, a:mainCfg,
 //         list:[
 //         {
 //           type: 'object',
