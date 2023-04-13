@@ -21,8 +21,8 @@ initMenu.setData = (main, mainCfg) => {
       path: main,
       groupName: 'script data',
       cName: 'flex',
-      legend: '💢 Игнорируемые',
-      info: 'Подсайты',
+      legend: '💢 Подсайты',
+      info: 'Игнорируемые',
       rtn: [],
       liveList: {c:{g:'ignored'}, a:mainCfg,
         list:[
@@ -58,8 +58,8 @@ initMenu.setData = (main, mainCfg) => {
       path: main,
       groupName: 'script data',
       cName: 'flex',
-      legend: '💢 Игнорируемые',
-      info: 'Авторы',
+      legend: '💢 Авторы',
+      info: 'Игнорируемые',
       rtn: [],
       liveList: {c:{g:'ignored'}, a:mainCfg,
         list:[
@@ -95,8 +95,8 @@ initMenu.setData = (main, mainCfg) => {
       path: main,
       groupName: 'script data',
       cName: 'flex',
-      legend: '💢 Игнорируемые',
-      info: 'Фиды',
+      legend: '💢 Фиды',
+      info: 'Игнорируемые',
       rtn: [],
       liveList: {c:{g:'ignored'}, a:mainCfg,
         list:[
@@ -143,8 +143,8 @@ initMenu.setData = (main, mainCfg) => {
       path: main,
       groupName: 'script data',
       cName: 'flex',
-      legend: '💘 Избранные',
-      info: 'Подсайты',
+      legend: '💘 Подсайты',
+      info: 'Избранные',
       rtn: [],
       liveList: {c:{g:'favorite'}, a:mainCfg,
         list:[
@@ -180,8 +180,8 @@ initMenu.setData = (main, mainCfg) => {
       path: main,
       groupName: 'script data',
       cName: 'flex',
-      legend: '💘 Избранные',
-      info: 'Авторы',
+      legend: '💘 Авторы',
+      info: 'Избранные',
       rtn: [],
       liveList: {c:{g:'favorite'}, a:mainCfg,
         list:[
@@ -213,51 +213,51 @@ initMenu.setData = (main, mainCfg) => {
       }
     });
     
-//     new Field({
-//       path: main,
-//       groupName: 'script data',
-//       cName: 'flex',
-//       legend: '💘 Избранные',
-//       info: 'Фиды',
-//       rtn: [],
-//       liveList: {c:{g:'favorite'}, a:mainCfg,
-//         list:[
-//         {
-//           type: 'object',
-//           mode: 'view-del',
-//           label: 'Фиды',
-//           name: 'feeds',
-//           cName: 'vertical',
-//           view: (e) => {
-//               if(!e) return;
-//               return `📰🆔: ${e.feedID};
-//               📰📜 ${e.feedTitle};
-//               📛: ${e.author};
-//               🆔: ${e.authorID};
-//               ❓: ${e.authorType};
-//               📅: ${e.date};`
-//           },
-//           buttons: (e, v) => {
-//               if(!e) return;
-//               new Button({
-//                   path: e,
-//                   cName: 'btn',
-//                   text: '🔗',
-//                   onclick: () => {
-//                       linkOpener(v);
-//                   }
-//               });
-//               new Button({
-//                   path: e,
-//                   cName: 'btn',
-//                   text: '🔗',
-//                   onclick: () => {
-//                       feedOpener(v);
-//                   }
-//               })
-//           },
-//           clearList: true
-//         }]
-//       }
-//     });
+    new Field({
+      path: main,
+      groupName: 'script data',
+      cName: 'flex',
+      legend: '✔️ Фиды',
+      info: 'Просмотренные',
+      rtn: [],
+      liveList: {c:{g:'watched'}, a:mainCfg,
+        list:[
+        {
+          type: 'object',
+          mode: 'view-del',
+          label: 'Фиды',
+          name: 'feeds',
+          cName: 'vertical',
+          view: (e) => {
+              if(!e) return;
+              return `📰🆔: ${e.feedID};
+              📰📜 ${e.feedTitle};
+              📛: ${e.author};
+              🆔: ${e.authorID};
+              ❓: ${e.authorType};
+              📅: ${e.date};`
+          },
+          buttons: (e, v) => {
+              if(!e) return;
+              new Button({
+                  path: e,
+                  cName: 'btn',
+                  text: '🔗',
+                  onclick: () => {
+                      linkOpener(v);
+                  }
+              });
+              new Button({
+                  path: e,
+                  cName: 'btn',
+                  text: '🔗',
+                  onclick: () => {
+                      feedOpener(v);
+                  }
+              })
+          },
+          clearList: true
+        }]
+      }
+    });
   }
