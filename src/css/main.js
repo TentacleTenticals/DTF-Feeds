@@ -1,4 +1,4 @@
-const mainCSS = (mainCfg) => `
+const mainCSS = (cfg) => `
 .dtf-feedGroups .content-header-repost {
   position: absolute;
   left: 0px;
