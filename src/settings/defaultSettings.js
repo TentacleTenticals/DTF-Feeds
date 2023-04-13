@@ -20,6 +20,13 @@ const defaultSettings = {
       'topics': 'subsites and blogs'
     },
   },
+  'feeds': {
+    'attachments': {
+      'size': {
+        'video': 300
+      }
+    }
+  }
   'what to group': {
     'subsites': true,
     'blogs': true
