@@ -285,7 +285,7 @@ const mainCSS = (cfg) => `
   color: rgb(50 50 50);
   font-size: 13px;
   font-weight: 600;
-  top: 3px;
+  top: 16px;
   text-align: center;
   z-index: 0;
 }
