@@ -48,7 +48,19 @@ initMenu.setData = (main, mainCfg) => {
               })
           },
           clearList: true
-        },
+        }]
+      }
+    });
+    
+    new Field({
+      path: main,
+      groupName: 'script data',
+      cName: 'flex',
+      legend: 'Игнорируемые',
+      info: 'Авторы',
+      rtn: [],
+      liveList: {c:{g:'ignored'}, a:mainCfg,
+        list:[
         {
           type: 'object',
           mode: 'view-del',
@@ -73,7 +85,19 @@ initMenu.setData = (main, mainCfg) => {
               })
           },
           clearList: true
-        },
+        }]
+      }
+    });
+    
+    new Field({
+      path: main,
+      groupName: 'script data',
+      cName: 'flex',
+      legend: 'Игнорируемые',
+      info: 'Фиды',
+      rtn: [],
+      liveList: {c:{g:'ignored'}, a:mainCfg,
+        list:[
         {
           type: 'object',
           mode: 'view-del',
