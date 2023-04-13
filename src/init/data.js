@@ -11,7 +11,10 @@ initMenu.setData = (main, mainCfg) => {
           return i.authorID;
         }
       })()}`, '_blank').focus();
-    }
+    };
+    function feedOpener(i){
+      window.open(`https://dtf.ru/${i.feedID}`, '_blank').focus();
+    };
     new Field({
       path: main,
       groupName: 'script data',
@@ -38,7 +41,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: 'q',
+                  text: '🔗',
                   onclick: () => {
                       linkOpener(v);
                   }
@@ -63,7 +66,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: 'q',
+                  text: '🔗',
                   onclick: () => {
                       linkOpener(v);
                   }
@@ -91,9 +94,17 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: 'q',
+                  text: '🔗',
                   onclick: () => {
                       linkOpener(v);
+                  }
+              });
+              new Button({
+                  path: e,
+                  cName: 'btn',
+                  text: '🔗',
+                  onclick: () => {
+                      feedOpener(v);
                   }
               })
           },
