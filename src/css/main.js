@@ -50,7 +50,7 @@ const mainCSS = (cfg) => `
 .dtf-feedGroups .dtf-feed-group .subGroup {
   background-color: rgb(0 0 0);
   border-radius: 3px;
-  box-shadow: 0px 0px 2px 0px rgb(0 0 0);
+  box-shadow: inset 0px 0px 3px 0px rgb(50 50 50), 0px 0px 2px 0px rgb(50 50 50);
 }
 
 .dtf-feedGroups .subList {
@@ -169,12 +169,6 @@ const mainCSS = (cfg) => `
 }
 .dtf-feedGroups .l-island-round {
   border-radius: unset;
-}
-
-.dtf-feed-group .subGroup {
-  position: relative;
-  background-color: rgb(0 0 0);
-  box-shadow: inset 0px 0px 3px 0px rgb(50 50 50), 0px 0px 2px 0px rgb(50 50 50);
 }
 
 .dtf-feed-group .panel .newMark {
@@ -420,7 +414,7 @@ const mainCSS = (cfg) => `
 .dtf-feedGroups .feed__item.l-island-round.ignoredSubsite>:nth-child(1) {
   filter: opacity(0.7);
 }
-.dtf-feedGroups .feed__item.l-island-round:is(.ignoredSubsite, .ignoredAuthor) .content-header {
+.dtf-feedGroups .feed__item.l-island-round:is(.ignoredSubsite, .ignoredAuthor, .ignoredFeed) .content-header {
   background-color: rgb(215 148 171);
 }
 .dtf-feedGroups .feed__item.l-island-round.ignoredSubsite .ignoreSubsite.btn {
@@ -454,7 +448,7 @@ const mainCSS = (cfg) => `
 
 
 
-.dtf-feed-group .subGroup:is(.ignoredSubsite, .ignoredAuthor) {
+.dtf-feed-group .subGroup:is(.ignoredSubsite, .ignoredAuthor, .ignoredFeed) {
   background-color: rgb(78 28 52);
 }
 
