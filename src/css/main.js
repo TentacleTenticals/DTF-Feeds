@@ -174,6 +174,7 @@ const mainCSS = (cfg) => `
 .dtf-feed-group .subGroup {
   position: relative;
   background-color: rgb(0 0 0);
+  box-shadow: inset 0px 0px 3px 0px rgb(50 50 50), 0px 0px 2px 0px rgb(50 50 50);
 }
 
 .dtf-feed-group .panel .newMark {
@@ -333,7 +334,6 @@ const mainCSS = (cfg) => `
 
 .dtf-feed-group .subGroup:is(.favoriteSubsite, .favoriteAuthor) {
   background-color: rgb(209 144 175);
-  box-shadow: 0px 0px 3px 1px rgb(50 50 50);
 }
 .dtf-feedGroups .feed__item.l-island-round:is(.favoriteSubsite, .favoriteAuthor) .content-header {
   background-color: rgb(209 144 175);
@@ -380,7 +380,7 @@ const mainCSS = (cfg) => `
   content: 'АВТОР 💘';
 }
 
-.dtf-feedGroups .feed__item.l-island-round.favoriteSubsite .content-header {
+.dtf-feedGroups .feed__item.l-island-roundLis(.favoriteSubsite, .favoriteAuthor) .content-header {
   background-color: rgb(144 209 172);
 }
 .dtf-feedGroups .feed__item.l-island-round.favoriteSubsite .favoriteSubsite.btn {
@@ -420,7 +420,7 @@ const mainCSS = (cfg) => `
 .dtf-feedGroups .feed__item.l-island-round.ignoredSubsite>:nth-child(1) {
   filter: opacity(0.7);
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredSubsite .content-header {
+.dtf-feedGroups .feed__item.l-island-round:is(.ignoredSubsite, .ignoredAuthor) .content-header {
   background-color: rgb(215 148 171);
 }
 .dtf-feedGroups .feed__item.l-island-round.ignoredSubsite .ignoreSubsite.btn {
@@ -444,7 +444,7 @@ const mainCSS = (cfg) => `
 .dtf-feedGroups .feed__item.l-island-round.ignoredFeed>:nth-child(1) {
   filter: opacity(0.7);
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredFeed .content-header {
+.dtf-feedGroups .feed__item.l-island-round:is(.ignoredFeed, .ignoredAuthor) .content-header {
   background-color: rgb(229 198 198);
 }
 .dtf-feedGroups .feed__item.l-island-round.ignoredFeed .ignoreFeed.btn {
@@ -454,9 +454,8 @@ const mainCSS = (cfg) => `
 
 
 
-.dtf-feed-group .subGroup.ignoredAuthor {
+.dtf-feed-group .subGroup:is(.ignoredSubsite, .ignoredAuthor) {
   background-color: rgb(78 28 52);
-  box-shadow: 0px 0px 2px 0px rgb(0 0 0);
 }
 
 .dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedNoText::after {
