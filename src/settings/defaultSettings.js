@@ -60,6 +60,14 @@ const defaultSettings = {
         }
       }
     },
+    'favorite': {
+      'visual': {
+        'color': {
+          'panel': '#a3f9c3',
+          'feed': '#a3f9c3'
+        }
+      }
+    },
     'subsites': {
       'title': {
         'active': true,
