@@ -322,12 +322,12 @@ initMenu.setSettings = (main, mainCfg) => {
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
-      inputs: {c:{g:'ignored.feeds'}, a:mainCfg,
+      inputs: {c:{g:'ignored.visual.color'}, a:mainCfg,
         list:[
           {
             type: 'color',
-            label: 'Цвет',
-            name: 'color'
+            label: 'Цвет панели',
+            name: 'panel'
           }
       ]}
     });
@@ -346,14 +346,6 @@ initMenu.setSettings = (main, mainCfg) => {
           name: 'action',
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
-      ]},
-      inputs: {c:{g:'ignored.subsites'}, a:mainCfg,
-        list:[
-          {
-            type: 'color',
-            label: 'Цвет',
-            name: 'color'
-          }
       ]}
     });
 
@@ -371,14 +363,6 @@ initMenu.setSettings = (main, mainCfg) => {
           name: 'action',
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
-      ]},
-      inputs: {c:{g:'ignored.authors'}, a:mainCfg,
-        list:[
-          {
-            type: 'color',
-            label: 'Цвет',
-            name: 'color'
-          }
       ]}
     });
 
@@ -396,14 +380,6 @@ initMenu.setSettings = (main, mainCfg) => {
           name: 'action',
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
-      ]},
-      inputs: {c:{g:'watched.feeds'}, a:mainCfg,
-        list:[
-          {
-            type: 'color',
-            label: 'Цвет',
-            name: 'color'
-          }
       ]}
     });
   }
