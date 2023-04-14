@@ -34,22 +34,30 @@ const defaultSettings = {
   'filters': {
     'ignored': {
       'feeds': {
-        'action': 'collapse',
-        'color': ''
+        'action': 'collapse'
       },
       'authors': {
-        'action': 'collapse',
-        'color': ''
+        'action': 'collapse'
       },
       'subsites': {
-        'action': 'collapse',
-        'color': ''
+        'action': 'collapse'
+      },
+      'visual': {
+        'color': {
+          'panel': '#6c2e4c',
+          'feed': '#e5c6c6'
+        }
       }
     },
     'watched': {
       'feeds': {
-        'action': 'collapse',
-        'color': ''
+        'action': 'collapse'
+      },
+      'visual': {
+        'color': {
+          'panel': '',
+          'feed': '#c7e5d7'
+        }
       }
     },
     'subsites': {
