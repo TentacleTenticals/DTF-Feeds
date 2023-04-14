@@ -327,11 +327,11 @@ const mainCSS = (cfg) => `
 }
 
 .dtf-feed-group .subGroup:is(.favoriteSubsite, .favoriteAuthor) {
-  background-color: cfg['filters']['favorite']['visual']['color']['panel'];
+  background-color: ${cfg['filters']['favorite']['visual']['color']['panel']};
   background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 50%, transparent);
 }
 .dtf-feedGroups .feed__item.l-island-round:is(.favoriteSubsite, .favoriteAuthor) .content-header {
-  background-color: cfg['filters']['favorite']['visual']['color']['feed'];
+  background-color: ${cfg['filters']['favorite']['visual']['color']['feed']};
 }
 .dtf-feedGroups .feed__item.l-island-round.favoriteAuthor .favoriteAuthor.btn {
   background-color: rgb(243 160 208);
@@ -429,7 +429,7 @@ const mainCSS = (cfg) => `
   filter: opacity(0.7);
 }
 .dtf-feedGroups .feed__item.l-island-round.watchedFeed .content-header {
-  background-color: cfg['filters']['watched']['visual']['color']['feed'];
+  background-color: ${cfg['filters']['watched']['visual']['color']['feed']};
 }
 .dtf-feedGroups .feed__item.l-island-round.watchedFeed .watchFeed.btn {
   background-color: rgb(243 160 208);
@@ -440,7 +440,7 @@ const mainCSS = (cfg) => `
   filter: opacity(0.7);
 }
 .dtf-feedGroups .feed__item.l-island-round:is(.ignoredFeed, .ignoredAuthor) .content-header {
-  background-color: cfg['filters']['ignored']['visual']['color']['feed'];
+  background-color: ${cfg['filters']['ignored']['visual']['color']['feed']};
 }
 .dtf-feedGroups .feed__item.l-island-round.ignoredFeed .ignoreFeed.btn {
   background-color: rgb(243 160 208);
@@ -450,7 +450,7 @@ const mainCSS = (cfg) => `
 
 
 .dtf-feed-group .subGroup:is(.ignoredSubsite, .ignoredAuthor, .ignoredFeed) {
-  background-color: cfg['filters']['ignored']['visual']['color']['panel'];
+  background-color: ${cfg['filters']['ignored']['visual']['color']['panel']};
   background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 50%, transparent);
 }
 
