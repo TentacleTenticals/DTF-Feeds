@@ -7,6 +7,10 @@ const mainCSS = (cfg) => `
   width: max-content;
   font-size: 0;
 }
+.dtf-feedGroups .content-header-author__avatar {
+  border-radius: 50%;
+  box-shadow: 0 0 2px 0px rgb(0 0 0);
+}
 
 :is(.dtf-feedGroups, .dtf-feedGroups.obs) {
   display: flex;
