@@ -328,6 +328,11 @@ initMenu.setSettings = (main, mainCfg) => {
             type: 'color',
             label: 'Цвет панели',
             name: 'panel'
+          },
+          {
+            type: 'color',
+            label: 'Цвет фида',
+            name: 'feed'
           }
       ]}
     });
