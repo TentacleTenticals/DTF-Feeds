@@ -67,6 +67,7 @@ const mainCSS = (cfg) => `
   overflow-y: auto;
   flex-direction: column;
   overscroll-behavior: contain;
+  box-shadow: 0 0 3px 0px rgb(0 0 0);
 }
 
 .dtf-feedGroups .dtf-feed-group :is(.groupHeader, .panel) {
