@@ -356,22 +356,22 @@ const mainCSS = (cfg) => `
 }
 
 .dtf-feedGroups .subGroup.ignoredSubsite.ignoredAuthor .panel::after {
-  content: 'ПОДСАЙТ И АВТОР 💢';
+  content: 'ПОДСАЙТ И АВТОР 💢\uFE0E';
 }
 .dtf-feedGroups .subGroup.favoriteSubsite.favoriteAuthor .panel::after {
   content: 'ПОДСАЙТ И АВТОР 💘';
 }
 .dtf-feedGroups .subGroup.favoriteSubsite.ignoredAuthor .panel::after {
-  content: 'ПОДСАЙТ 💘, АВТОР 💢';
+  content: 'ПОДСАЙТ 💘, АВТОР 💢\uFE0E';
 }
 .dtf-feedGroups .subGroup.ignoredSubsite.favoriteAuthor .panel::after {
-  content: 'ПОДСАЙТ 💢, АВТОР 💘';
+  content: 'ПОДСАЙТ 💢\uFE0E, АВТОР 💘';
 }
 .dtf-feedGroups .subGroup.ignoredSubsite .panel::after {
-  content: 'ПОДСАЙТ 💢';
+  content: 'ПОДСАЙТ 💢\uFE0E';
 }
 .dtf-feedGroups .subGroup.ignoredAuthor .panel::after {
-  content: 'АВТОР 💢';
+  content: 'АВТОР 💢\uFE0E';
 }
 .dtf-feedGroups .subGroup.favoriteSubsite .panel::after {
   content: 'ПОДСАЙТ 💘';
