@@ -169,7 +169,7 @@ const mainCSS = (cfg) => `
   box-shadow: 0px 0px 3px 0px rgb(0 0 0);
 }
 
-.dtf-feedGroups .feed__item.l-island-round>div {
+.dtf-feedGroups .feed__item.l-island-round>:nth-child(1) {
   margin-bottom: unset;
 }
 .dtf-feedGroups .l-island-round {
@@ -317,8 +317,9 @@ const mainCSS = (cfg) => `
   font-weight: 600;
 }
 
-.dtf-feedGroups .feed__item.l-island-round:is(.collapsed),
-.feed__item.l-island-round:is(.collapsed)>div {
+.dtf-feedGroups .feed__item.l-island-round.collapsed,
+.feed__item.l-island-round.collapsed>:nth-child(1) {
+  min-height: 45px;
   height: 45px;
   overflow-y: hidden;
 }
