@@ -80,9 +80,10 @@ const mainCSS = (cfg) => `
   font-size: 14px;
   cursor: pointer;
 }
-.dtf-feed-group .groupHeader {
-    background-color: rgb(58 21 78);
-    border-radius: 3px;
+.dtf-feedGroups .dtf-feed-group .groupHeader {
+  display: block;
+  background-color: rgb(58 21 78);
+  border-radius: 3px;
 }
 .dtf-feed-group .groupHeader :is(.title, .num, newMark) {
   display: inline-block;
@@ -98,10 +99,6 @@ const mainCSS = (cfg) => `
 }
 .dtf-feed-group .groupHeader .num.off {
   display: none;
-}
-
-.dtf-feedGroups .dtf-feed-group .panel {
-  display: block;
 }
 
 .dtf-feed-group .panel .info {
