@@ -112,10 +112,10 @@ const mainCSS = (cfg) => `
   max-height: 14px;
 }
 .dtf-feed-group .panel :is(.title, .num, .newMark) {
-  display: inline-block;
+  display: inline;
   background-color: rgb(0 0 0);
   margin: 0px 5px -1px 0px;
-  padding: 0 2px 0 2px;
+  padding: 1px 2px 1px 2px;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -178,11 +178,10 @@ const mainCSS = (cfg) => `
 
 .dtf-feed-group .panel .newMark {
   background-color: rgb(0 0 0);
-  display: inline-block;
   max-width: max-content;
   color: rgb(203 203 203);
   font-size: 13px;
-  padding: 0px 3px 0px 3px;
+  padding: 1px 3px 1px 3px;
   border-radius: 3px;
   margin-left: 5px;
 }
@@ -259,7 +258,7 @@ const mainCSS = (cfg) => `
   display: inline;
   position: relative;
   background-color: rgb(0 0 0);
-  padding: 0 2px 0 2px;
+  padding: 2px 2px 2px 2px;
   font-size: 11px;
   border-radius: 2px;
   top: -2px;
