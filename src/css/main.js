@@ -100,6 +100,10 @@ const mainCSS = (cfg) => `
   display: none;
 }
 
+.dtf-feedGroups .dtf-feed-group .panel {
+  display: block;
+}
+
 .dtf-feed-group .panel .info {
   display: flex;
   flex-direction: row;
