@@ -203,11 +203,10 @@ const mainCSS = (cfg) => `
   display: none;
   position: relative;
   float: right;
-  margin: 1px 0px 0px 0px;
   z-index: 10;
 }
 .dtf-feed-group .panel:hover .sgActions {
-  display: inline-block;
+  display: inline-flex;
 }
 
 .dtf-feed-group .sgActions button {
@@ -268,10 +267,10 @@ const mainCSS = (cfg) => `
   display: inline;
   position: relative;
   background-color: rgb(0 0 0);
+  margin: auto;
   padding: 2px 2px 2px 2px;
   font-size: 11px;
   border-radius: 2px;
-  top: -2px;
 }
 
 .dtf-feedGroups .feed__item.l-island-round:is(
