@@ -71,8 +71,11 @@ const mainCSS = (cfg) => `
 }
 
 .dtf-feedGroups .dtf-feed-group :is(.groupHeader, .panel) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
-  color: white;
+  color: rgb(255 255 255);
   padding: 3px;
   font-size: 14px;
   cursor: pointer;
@@ -96,10 +99,17 @@ const mainCSS = (cfg) => `
 .dtf-feed-group .groupHeader .num.off {
   display: none;
 }
+
+.dtf-feed-group .panel .info {
+  display: flex;
+  flex-direction: row;
+  gap: 0 5px;
+}
+
 .dtf-feed-group .panel .mask {
   width: 14px;
   height: 14px;
-  margin: 0px 5px 0px 0px;
+  margin: auto;
   background-color: rgb(255 255 255);
   border-radius: 50%;
   display: inline-flex;
@@ -114,7 +124,7 @@ const mainCSS = (cfg) => `
 .dtf-feed-group .panel :is(.title, .num, .newMark) {
   display: inline;
   background-color: rgb(0 0 0);
-  margin: 0px 5px -1px 0px;
+  margin: auto;
   padding: 1px 2px 1px 2px;
   border-radius: 2px;
   overflow: hidden;
@@ -254,7 +264,7 @@ const mainCSS = (cfg) => `
   z-index: 0;
 }
 
-.dtf-feedGroups .subGroup:is(.ignoredSubsite, .ignoredAuthor, .favoriteSubsite, .favoriteAuthor) .panel::after {
+.dtf-feedGroups .subGroup:is(.ignoredSubsite, .ignoredAuthor, .favoriteSubsite, .favoriteAuthor) .panel .info::after {
   display: inline;
   position: relative;
   background-color: rgb(0 0 0);
@@ -355,28 +365,28 @@ const mainCSS = (cfg) => `
   font-weight: 500;
 }
 
-.dtf-feedGroups .subGroup.ignoredSubsite.ignoredAuthor .panel::after {
+.dtf-feedGroups .subGroup.ignoredSubsite.ignoredAuthor .panel .info::after {
   content: 'ПОДСАЙТ И АВТОР 💢\uFE0E';
 }
-.dtf-feedGroups .subGroup.favoriteSubsite.favoriteAuthor .panel::after {
+.dtf-feedGroups .subGroup.favoriteSubsite.favoriteAuthor .panel .info::after {
   content: 'ПОДСАЙТ И АВТОР 💘';
 }
-.dtf-feedGroups .subGroup.favoriteSubsite.ignoredAuthor .panel::after {
+.dtf-feedGroups .subGroup.favoriteSubsite.ignoredAuthor .panel .info::after {
   content: 'ПОДСАЙТ 💘, АВТОР 💢\uFE0E';
 }
-.dtf-feedGroups .subGroup.ignoredSubsite.favoriteAuthor .panel::after {
+.dtf-feedGroups .subGroup.ignoredSubsite.favoriteAuthor .panel .info::after {
   content: 'ПОДСАЙТ 💢\uFE0E, АВТОР 💘';
 }
-.dtf-feedGroups .subGroup.ignoredSubsite .panel::after {
+.dtf-feedGroups .subGroup.ignoredSubsite .panel .info::after {
   content: 'ПОДСАЙТ 💢\uFE0E';
 }
-.dtf-feedGroups .subGroup.ignoredAuthor .panel::after {
+.dtf-feedGroups .subGroup.ignoredAuthor .panel .info::after {
   content: 'АВТОР 💢\uFE0E';
 }
-.dtf-feedGroups .subGroup.favoriteSubsite .panel::after {
+.dtf-feedGroups .subGroup.favoriteSubsite .panel .info::after {
   content: 'ПОДСАЙТ 💘';
 }
-.dtf-feedGroups .subGroup.favoriteAuthor .panel::after {
+.dtf-feedGroups .subGroup.favoriteAuthor .panel .info::after {
   content: 'АВТОР 💘';
 }
 
