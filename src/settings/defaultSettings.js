@@ -103,16 +103,16 @@ const defaultSettings = {
   },
   'script data': {
     'ignored': {
-      'subsites': true,
-      'authors': true,
-      'feeds': true
+      'subsites': Array,
+      'authors': Array,
+      'feeds': Array
     },
     'favorite': {
-      'subsites': true,
-      'authors': true
+      'subsites': Array,
+      'authors': Array
     },
     'watched': {
-      'feeds': true
+      'feeds': Array
     }
   },
   'scriptInfo': {
