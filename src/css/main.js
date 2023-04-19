@@ -343,7 +343,7 @@ const mainCSS = (cfg) => `
 
 .dtf-feed-group .subGroup:is(.favoriteSubsite, .favoriteAuthor) {
   background-color: ${cfg['filters']['favorite']['visual']['color']['panel']};
-  background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 50%, transparent);
+  background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 49%, transparent);
 }
 .dtf-feedGroups .feed__item.l-island-round:is(.favoriteSubsite, .favoriteAuthor) .content-header {
   background-color: ${cfg['filters']['favorite']['visual']['color']['feed']};
@@ -466,7 +466,7 @@ const mainCSS = (cfg) => `
 
 .dtf-feed-group .subGroup:is(.ignoredSubsite, .ignoredAuthor, .ignoredFeed) {
   background-color: ${cfg['filters']['ignored']['visual']['color']['panel']};
-  background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 50%, transparent);
+  background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 49%, transparent);
 }
 
 .dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedNoText::after {
