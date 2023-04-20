@@ -22,6 +22,9 @@ const defaultSettings = {
   },
   'feeds': {
     'attachments': {
+      'replacing': {
+        'video': true,
+      },
       'size': {
         'video': 300
       }
