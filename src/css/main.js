@@ -251,18 +251,6 @@ const mainCSS = (cfg) => `
   box-shadow: 0px 0px 3px 1px rgb(0 0 0);
   border-radius: unset;
 }
-.dtf-feedGroups .feed__item.l-island-round.collapsed::after {
-  display: block;
-  width: 100%;
-  position: absolute;
-  color: rgb(108 108 108);
-  font-size: 14px;
-  font-weight: 600;
-  top: 3px;
-  text-align: center;
-  filter: contrast(1);
-  z-index: 0;
-}
 
 .dtf-feedGroups .subGroup:is(.ignoredSubsite, .ignoredAuthor, .favoriteSubsite, .favoriteAuthor) .panel .info::after {
   display: inline;
@@ -299,7 +287,7 @@ const mainCSS = (cfg) => `
   color: rgb(50 50 50);
   font-size: 13px;
   font-weight: 600;
-  top: 16px;
+  top: 3px;
   text-align: center;
   z-index: 0;
 }
@@ -320,7 +308,10 @@ const mainCSS = (cfg) => `
 .subsiteBlockedNoTitle, .subsiteBlockedTitle,
 .subsiteBlockedNoText, .subsiteBlockedText)::after {
   display: block;
-  text-align: center !important;
+  position: absolute;
+  width: 100%;
+  top: 3px;
+  text-align: right;
   color: rgb(108 108 108);
   font-size: 13px;
   font-weight: 600;
