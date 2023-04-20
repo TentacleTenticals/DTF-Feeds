@@ -97,7 +97,7 @@ const defaultSettings = {
     },
     'attachments': {
       'replacing': {
-        'video': true,
+        'video': true
       },
       'size': {
         'video': 300
