@@ -138,7 +138,7 @@ const mainCSS = (cfg) => `
   margin-left: 5px;
   color: rgb(255 255 255);
   padding: 1px 3.5px 0px 3.5px;
-  border-radius: 50%;
+  border-radius: 4px;
   font-size: 12px;
   font-weight: 600;
   line-height: 12px;
