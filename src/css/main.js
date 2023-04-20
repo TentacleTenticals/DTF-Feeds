@@ -272,8 +272,8 @@ const mainCSS = (cfg) => `
   color: rgb(108 108 108);
   font-size: 11px;
   font-weight: 600;
+  margin: 0 0 0 3px;
   top: 3px;
-  left: 3px;
   text-align: left;
   z-index: 0;
 }
@@ -310,6 +310,7 @@ const mainCSS = (cfg) => `
   display: block;
   position: absolute;
   width: 100%;
+  margin: 0 0 0 -3px;
   top: 3px;
   text-align: right;
   color: rgb(108 108 108);
