@@ -74,14 +74,14 @@ const defaultSettings = {
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': ['']
+        'words': []
       },
       'text': {
         'active': true,
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': ['']
+        'words': []
       }
     },
     'blogs': {
@@ -90,14 +90,14 @@ const defaultSettings = {
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': ['']
+        'words': []
       },
       'text': {
         'active': true,
         'action': 'collapse',
         'react text': true,
         'react no text': true,
-        'words': ['']
+        'words': []
       }
     },
   },
