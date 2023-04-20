@@ -309,7 +309,7 @@ const mainCSS = (cfg) => `
   position: absolute;
   width: 100%;
   margin: 0 0 0 -3px;
-  top: 3px;
+  top: 1px;
   text-align: right;
   color: rgb(108 108 108);
   font-size: 13px;
