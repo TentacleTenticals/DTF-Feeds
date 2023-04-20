@@ -17,7 +17,7 @@ const defaultSettings = {
         'subsites': 'subsites and blogs',
         'user pages': 'subsites and blogs',
         'topics': 'subsites and blogs'
-      },
+      }
     }
   },
   'feeds': {
