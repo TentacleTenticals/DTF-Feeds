@@ -278,16 +278,14 @@ const mainCSS = (cfg) => `
   z-index: 0;
 }
 
-.dtf-feedGroups .feed__item.l-island-round:is(
-.watchedFeed, .ignoredFeed
-)>:nth-child(1)::after {
+.dtf-feedGroups .feed__item.l-island-round:is(.watchedFeed, .ignoredFeed)>:nth-child(1)::after {
   display: block;
   width: 100%;
   position: absolute;
   color: rgb(50 50 50);
   font-size: 13px;
   font-weight: 600;
-  top: 3px;
+  top: 2px;
   text-align: center;
   z-index: 0;
 }
