@@ -18,11 +18,11 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'where to react',
+      groupName: 'working mode',
       cName: 'grid',
       legend: 'Где действовать',
-      info: 'Где именнно действовать',
-      inputs: {c:true, a:mainCfg,
+      info: 'Где именно действовать',
+      inputs: {c:{g:'where to react'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -64,12 +64,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
       new Field({
         path: main,
-        groupName: 'where to react',
+        groupName: 'working mode',
         cName: 'grid',
         legend: 'Что показывать',
         info: 'Бла бла бла',
         rtn: [],
-        select: {c:{g:'types to show'}, a:mainCfg,
+        select: {c:{g:'where to react.types to show'}, a:mainCfg,
           list:[
             {
               label: 'Популярное',
@@ -111,12 +111,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
       new Field({
         path: main,
-        groupName: 'what to group',
+        groupName: 'feeds',
         cName: 'grid',
         legend: 'Группировка',
         info: 'Что группировать',
         rtn: [],
-        inputs: {c:true, a:mainCfg,
+        inputs: {c:{g:'what to group'}, a:mainCfg,
           list:[
             {
               type: 'checkbox',
@@ -133,12 +133,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'filters',
+      groupName: 'feeds',
       cName: 'flex',
       legend: 'Фильтры подсайтов',
       info: 'Заголовок',
       rtn: [],
-      select: {c:{g:'subsites.title'}, a:mainCfg,
+      select: {c:{g:'filters.subsites.title'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -146,7 +146,7 @@ initMenu.setSettings = (main, mainCfg) => {
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
-      inputs: {c:{g:'subsites.title'}, a:mainCfg,
+      inputs: {c:{g:'filters.subsites.title'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -164,7 +164,7 @@ initMenu.setSettings = (main, mainCfg) => {
             name: 'react no text'
           }
       ]},
-      liveList: {c:{g:'subsites.title'}, a:mainCfg,
+      liveList: {c:{g:'feeds.subsites.title'}, a:mainCfg,
         list:[
         {
           type: 'string',
@@ -177,12 +177,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'filters',
+      groupName: 'feeds',
       cName: 'flex',
       legend: 'Фильтры подсайтов',
       info: 'Текст',
       rtn: [],
-      select: {c:{g:'subsites.text'}, a:mainCfg,
+      select: {c:{g:'filters.subsites.text'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -190,7 +190,7 @@ initMenu.setSettings = (main, mainCfg) => {
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
-      inputs: {c:{g:'subsites.text'}, a:mainCfg,
+      inputs: {c:{g:'filters.subsites.text'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -208,7 +208,7 @@ initMenu.setSettings = (main, mainCfg) => {
             name: 'react no text'
           }
       ]},
-      liveList: {c:{g:'subsites.text'}, a:mainCfg,
+      liveList: {c:{g:'filters.subsites.text'}, a:mainCfg,
         list:[
         {
           type: 'string',
@@ -221,12 +221,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'filters',
+      groupName: 'feeds',
       cName: 'flex',
       legend: 'Фильтры блогов',
       info: 'Заголовок',
       rtn: [],
-      select: {c:{g:'blogs.title'}, a:mainCfg,
+      select: {c:{g:'filters.blogs.title'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -234,7 +234,7 @@ initMenu.setSettings = (main, mainCfg) => {
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
-      inputs: {c:{g:'blogs.title'}, a:mainCfg,
+      inputs: {c:{g:'filters.blogs.title'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -252,7 +252,7 @@ initMenu.setSettings = (main, mainCfg) => {
             name: 'react no text'
           }
       ]},
-      liveList: {c:{g:'blogs.title'}, a:mainCfg,
+      liveList: {c:{g:'filters.blogs.title'}, a:mainCfg,
         list:[
         {
           type: 'string',
@@ -265,12 +265,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'filters',
+      groupName: 'feeds',
       cName: 'flex',
       legend: 'Фильтры блогов',
       info: 'Текст',
       rtn: [],
-      select: {c:{g:'blogs.text'}, a:mainCfg,
+      select: {c:{g:'filters.blogs.text'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -278,7 +278,7 @@ initMenu.setSettings = (main, mainCfg) => {
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
-      inputs: {c:{g:'blogs.text'}, a:mainCfg,
+      inputs: {c:{g:'filters.blogs.text'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
@@ -296,7 +296,7 @@ initMenu.setSettings = (main, mainCfg) => {
             name: 'react no text'
           }
       ]},
-      liveList: {c:{g:'blogs.text'}, a:mainCfg,
+      liveList: {c:{g:'filters.blogs.text'}, a:mainCfg,
         list:[
         {
           type: 'string',
@@ -309,12 +309,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'filters',
+      groupName: 'feeds',
       cName: 'grid',
       legend: 'Фильтры фидов',
       info: 'Игнорируемые',
       rtn: [],
-      select: {c:{g:'ignored.feeds'}, a:mainCfg,
+      select: {c:{g:'filters.ignored.feeds'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -322,7 +322,7 @@ initMenu.setSettings = (main, mainCfg) => {
           options: [['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
-      inputs: {c:{g:'ignored.visual.color'}, a:mainCfg,
+      inputs: {c:{g:'filters.ignored.visual.color'}, a:mainCfg,
         list:[
           {
             type: 'color',
@@ -339,12 +339,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'filters',
+      groupName: 'feeds',
       cName: 'grid',
       legend: 'Фильтры подсайтов',
       info: 'Игнорируемые',
       rtn: [],
-      select: {c:{g:'ignored.subsites'}, a:mainCfg,
+      select: {c:{g:'filters.ignored.subsites'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -356,12 +356,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'filters',
+      groupName: 'feeds',
       cName: 'grid',
       legend: 'Фильтры авторов',
       info: 'Игнорируемые',
       rtn: [],
-      select: {c:{g:'ignored.authors'}, a:mainCfg,
+      select: {c:{g:'filters.ignored.authors'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
@@ -373,12 +373,12 @@ initMenu.setSettings = (main, mainCfg) => {
 
     new Field({
       path: main,
-      groupName: 'filters',
+      groupName: 'feeds',
       cName: 'grid',
       legend: 'Фильтры фидов',
       info: 'Просмотренные',
       rtn: [],
-      select: {c:{g:'watched.feeds'}, a:mainCfg,
+      select: {c:{g:'filters.watched.feeds'}, a:mainCfg,
         list:[
         {
           label: 'Действие',
