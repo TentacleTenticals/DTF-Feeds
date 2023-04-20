@@ -260,7 +260,7 @@ const mainCSS = (cfg) => `
 
 .dtf-feedGroups .feed__item.l-island-round.collapsed {
   position: relative;
-  box-shadow: 0px 0px 3px 1px rgb(0 0 0);
+  box-shadow: 0px 0px 3px 0px rgb(0 0 0);
   border-radius: unset;
 }
 
