@@ -2,11 +2,23 @@ const mainCSS = (cfg) => `
 .dtf-feedGroups .content-header-repost {
   position: absolute;
   left: 0px;
-  margin: 0;
-  padding: 18px 0 0 0px;
+  margin: 14px 0 0 33px;
+  padding: unset;
   width: max-content;
+  height: max-content;
+  line-height: 0;
   font-size: 0;
+  z-index: 1;
 }
+.dtf-feedGroups .content-header-repost svg {
+  width: 15px;
+  height: 15px;
+  margin: unset;
+}
+.dtf-feedGroups .content-header-repost a {
+  display: none;
+}
+
 .dtf-feedGroups .content-header-author__avatar {
   border-radius: 50%;
   box-shadow: 0 0 2px 0px rgb(0 0 0);
