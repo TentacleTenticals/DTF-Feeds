@@ -164,7 +164,7 @@ initMenu.setSettings = (main, mainCfg) => {
             name: 'react no text'
           }
       ]},
-      liveList: {c:{g:'feeds.subsites.title'}, a:mainCfg,
+      liveList: {c:{g:'filters.subsites.title'}, a:mainCfg,
         list:[
         {
           type: 'string',
