@@ -256,6 +256,7 @@ const mainCSS = (cfg) => `
 
 .dtf-feedGroups .feed__item .content-header {
   height: 45px;
+  padding: 20px 10px 0 10px;
 }
 
 .dtf-feedGroups .feed__item.l-island-round.collapsed {
