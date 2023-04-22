@@ -1,4 +1,4 @@
-const defaultSettings = {
+let defaultSettings = {
   'working mode': {
     'type': 'panel',
     'where to react': {
