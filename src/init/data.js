@@ -43,7 +43,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: '🔗',
+                  text: '🔗\uFE0E',
                   onclick: () => {
                       linkOpener(v);
                   }
@@ -80,7 +80,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: '🔗',
+                  text: '🔗\uFE0E',
                   onclick: () => {
                       linkOpener(v);
                   }
@@ -120,7 +120,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: '🔗',
+                  text: '🔗\uFE0E',
                   onclick: () => {
                       linkOpener(v);
                   }
@@ -128,7 +128,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: '🔗',
+                  text: '🔗\uFE0E',
                   onclick: () => {
                       feedOpener(v);
                   }
@@ -165,7 +165,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: '🔗',
+                  text: '🔗\uFE0E',
                   onclick: () => {
                       linkOpener(v);
                   }
@@ -202,7 +202,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: '🔗',
+                  text: '🔗\uFE0E',
                   onclick: () => {
                       linkOpener(v);
                   }
@@ -242,7 +242,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: '🔗',
+                  text: '🔗\uFE0E',
                   onclick: () => {
                       linkOpener(v);
                   }
@@ -250,7 +250,7 @@ initMenu.setData = (main, mainCfg) => {
               new Button({
                   path: e,
                   cName: 'btn',
-                  text: '🔗',
+                  text: '🔗\uFE0E',
                   onclick: () => {
                       feedOpener(v);
                   }
