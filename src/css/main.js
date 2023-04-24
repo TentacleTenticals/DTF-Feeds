@@ -269,8 +269,12 @@ const mainCSS = (cfg) => `
 }
 
 .dtf-feedGroups .feed__item .content-header {
+  max-width: 100%;
   height: 45px;
   padding: 15px 10px 0 10px;
+}
+.dtf-feedGroups .content-title.l-island-a {
+  max-width: 100%;
 }
 
 .dtf-feedGroups .feed__item.l-island-round.collapsed {
