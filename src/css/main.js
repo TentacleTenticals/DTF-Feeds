@@ -273,7 +273,7 @@ const mainCSS = (cfg) => `
   height: 45px;
   padding: 15px 10px 0 10px;
 }
-.dtf-feedGroups .content-title.l-island-a {
+.dtf-feedGroups .l-island-a {
   max-width: 100%;
 }
 
