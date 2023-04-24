@@ -1,4 +1,18 @@
 const mainCSS = (cfg) => `
+.dtf-feedGroups .groupBtn {
+  background-color: rgb(0 0 0);
+  color: rgb(255 255 255);
+  padding: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.dtf-feedGroups .groupBtn:disabled {
+  filter: brightness(0.5);
+}
+.dtf-feedGroups .groupBtn:not(:disabled):hover {
+  filter: brightness(1.5);
+}
+
 .dtf-feedGroups .content-header-repost {
   position: absolute;
   left: 0px;
