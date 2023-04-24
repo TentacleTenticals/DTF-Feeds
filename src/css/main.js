@@ -89,7 +89,6 @@ const mainCSS = (cfg) => `
   background-color: rgb(255 255 255);
   margin: 5px;
   padding: 5px;
-  max-height: 500px;
   overflow-y: auto;
   flex-direction: column;
   overscroll-behavior: contain;
@@ -273,7 +272,7 @@ const mainCSS = (cfg) => `
   height: 45px;
   padding: 15px 10px 0 10px;
 }
-.dtf-feedGroups .l-island-a {
+.dtf-feedGroups :is(.l-island-a, .l-island-b) {
   max-width: 100%;
 }
 
