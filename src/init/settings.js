@@ -60,76 +60,93 @@ initMenu.setSettings = (main, mainCfg) => {
             name: 'topics'
           }
         ]}
-      });
+    });
 
-      new Field({
-        path: main,
-        groupName: 'working mode',
-        cName: 'grid',
-        legend: 'Что показывать',
-        info: 'Бла бла бла',
-        rtn: [],
-        select: {c:{g:'where to react.types to show'}, a:mainCfg,
-          list:[
-            {
-              label: 'Популярное',
-              name: 'popular',
-              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
-            },
-            {
-              label: 'Новое',
-              name: 'new',
-              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
-            },
-            {
-              label: 'Моё новое',
-              name: 'my new',
-              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
-            },
-            {
-              label: 'Закладки',
-              name: 'bookmarks',
-              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
-            },
-            {
-              label: 'Подсайты',
-              name: 'subsites',
-              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
-            },
-            {
-              label: 'Страницы пользователей',
-              name: 'user pages',
-              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
-            },
-            {
-              label: 'Статьи',
-              name: 'topics',
-              options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
-            }
-        ]}
-      });
+    new Field({
+      path: main,
+      groupName: 'working mode',
+      cName: 'grid',
+      legend: 'Что показывать',
+      info: 'Бла бла бла',
+      rtn: [],
+      select: {c:{g:'where to react.types to show'}, a:mainCfg,
+        list:[
+          {
+            label: 'Популярное',
+            name: 'popular',
+            options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
+          },
+          {
+            label: 'Новое',
+            name: 'new',
+            options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
+          },
+          {
+            label: 'Моё новое',
+            name: 'my new',
+            options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
+          },
+          {
+            label: 'Закладки',
+            name: 'bookmarks',
+            options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
+          },
+          {
+            label: 'Подсайты',
+            name: 'subsites',
+            options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
+          },
+          {
+            label: 'Страницы пользователей',
+            name: 'user pages',
+            options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
+          },
+          {
+            label: 'Статьи',
+            name: 'topics',
+            options: [['subsites', 'подсайты'], ['blogs', 'блоги'], ['subsites and blogs', 'подсайты и блоги']]
+          }
+      ]}
+    });
 
-      new Field({
-        path: main,
-        groupName: 'feeds',
-        cName: 'grid',
-        legend: 'Группировка',
-        info: 'Что группировать',
-        rtn: [],
-        inputs: {c:{g:'what to group'}, a:mainCfg,
-          list:[
-            {
-              type: 'checkbox',
-              label: 'Подсайты',
-              name: 'subsites'
-            },
-            {
-              type: 'checkbox',
-              label: 'Блоги',
-              name: 'blogs'
-            }
-          ]}
-      });
+    new Field({
+      path: main,
+      groupName: 'feeds',
+      cName: 'grid',
+      legend: 'Группировка',
+      info: 'Что группировать',
+      rtn: [],
+      inputs: {c:{g:'what to group'}, a:mainCfg,
+        list:[
+          {
+            type: 'checkbox',
+            label: 'Подсайты',
+            name: 'subsites'
+          },
+          {
+            type: 'checkbox',
+            label: 'Блоги',
+            name: 'blogs'
+          }
+      ]}
+    });
+    
+    new Field({
+      path: main,
+      groupName: 'feeds',
+      cName: 'grid',
+      legend: 'Вложения фидов',
+      info: 'Какие вложения заменять на их улучшенные версии',
+      rtn: [],
+      inputs: {c:{g:'attachments.replacing'}, a:mainCfg,
+        list:[
+          {
+            type: 'checkbox',
+            label: 'Видео',
+            name: 'videos'
+          }
+      ]}
+    });
 
     new Field({
       path: main,
