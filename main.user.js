@@ -7,8 +7,8 @@
 // @author      Tentacle Tenticals
 // @description Скрипт для управления DTF фидами
 // @homepage    https://github.com/TentacleTenticals/DTF-feeds
-// @updateURL   https://github.com/TentacleTenticals/DTF-feeds/raw/master/main.user.js
-// @downloadURL https://github.com/TentacleTenticals/DTF-feeds/raw/master/main.user.js
+// @updateURL   https://github.com/TentacleTenticals/DTF-Feeds/raw/main/main.user.js
+// @downloadURL https://github.com/TentacleTenticals/DTF-Feeds/raw/main/main.user.js
 //
 // @require     https://github.com/TentacleTenticals/dtf-libs-2.0/raw/main/libs/settings/db/indexedDB.js
 // @require https://github.com/TentacleTenticals/dtf-libs-2.0/raw/main/libs/settings/opener.js
