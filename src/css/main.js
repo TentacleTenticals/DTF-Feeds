@@ -91,7 +91,7 @@ const mainCSS = (cfg) => `
   padding: 5px;
   overflow-y: auto;
   flex-direction: column;
-  overscroll-behavior: contain;
+  overscroll-behavior: ${cfg['feeds']['scroll']['block'] ? 'contain' : 'auto'};
   box-shadow: 0 0 3px 0px rgb(0 0 0);
 }
 
