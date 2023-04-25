@@ -378,9 +378,6 @@ const mainCSS = (cfg) => `
 .dtf-feedGroups .feed__item.l-island-round.ignoredAuthor>:nth-child(1) {
   filter: opacity(0.7);
 }
-.dtf-feedGroups .feed__item.l-island-round.ignoredAuthor .content-header {
-  background-color: rgb(229 198 198);
-}
 .dtf-feedGroups .feed__item.l-island-round.ignoredAuthor .ignoreAuthor.btn {
   background-color: rgb(243 160 208);
   font-weight: 500;
