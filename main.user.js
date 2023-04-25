@@ -32,38 +32,6 @@
 /* jshint esversion:8 */
 
 (() => {
-  function backupSettingsToFile(data, filename, type) {
-    let file = new Blob([data], {type: type});
-    if(window.navigator.msSaveOrOpenBlob) window.navigator.msSaveOrOpenBlob(file, filename);
-    else{
-      var a = document.createElement("a"),
-      url = URL.createObjectURL(file);
-      a.href = url;
-      a.download = filename;
-      a.click();
-      window.URL.revokeObjectURL(url);
-    }
-  }
-  function readSettingsBackup(submit, e){
-    let fr = new FileReader();
-    let path = e.target;
-    fr.onloadend = (e) => {
-      // console.log(JSON.parse(e.target.result));
-      mainCfg = JSON.parse(e.target.result);
-      console.log(`Настройки успешно восстановлены.`, mainCfg);
-      new Alert({
-        type: 'Settings import',
-        text: 'Настройки успешно импортированы, но не сохранены. Переоткройте окно настроек и удостовертесь в том, что результат вас устраивает, после чего нажмите кнопку сохранения настроек.',
-        timer: 10000
-      })
-      path.parentNode.children[1].textContent = 'Настройки успешно загружены.';
-      submit.disabled = true;
-    };
-    fr.onerror = (e) => {
-      console.log(e);
-    };
-    fr.readAsText(e.target.files[0]);
-  }
   class menuButton{
     constructor({path, text, title, buttons}){
       this.main=document.createElement('div');
