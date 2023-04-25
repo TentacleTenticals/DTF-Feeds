@@ -135,6 +135,23 @@ initMenu.setSettings = (main, mainCfg) => {
       path: main,
       groupName: 'feeds',
       cName: 'grid',
+      legend: 'Скролл',
+      info: 'Действие при окончании скролла',
+      rtn: [],
+      inputs: {c:{g:'scroll'}, a:mainCfg,
+        list:[
+          {
+            type: 'checkbox',
+            label: 'Блокировать',
+            name: 'block'
+          }
+      ]}
+    });
+    
+    new Field({
+      path: main,
+      groupName: 'feeds',
+      cName: 'grid',
       legend: 'Вложения фидов',
       info: 'Какие вложения заменять на их улучшенные версии',
       rtn: [],
