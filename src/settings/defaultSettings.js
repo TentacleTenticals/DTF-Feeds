@@ -99,7 +99,7 @@ let defaultSettings = {
       }
     },
     'attachments': {
-      'replacing': {
+      'replace': {
         'video': true
       },
       'size': {
