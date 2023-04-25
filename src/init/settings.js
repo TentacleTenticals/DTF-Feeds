@@ -155,7 +155,7 @@ initMenu.setSettings = (main, mainCfg) => {
       legend: 'Вложения фидов',
       info: 'Какие вложения заменять на их улучшенные версии',
       rtn: [],
-      inputs: {c:{g:'attachments.replacing'}, a:mainCfg,
+      inputs: {c:{g:'attachments.replace'}, a:mainCfg,
         list:[
           {
             type: 'checkbox',
