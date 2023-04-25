@@ -100,7 +100,7 @@ let defaultSettings = {
     },
     'attachments': {
       'replace': {
-        'video': true
+        'videos': true
       },
       'size': {
         'video': 300
