@@ -15,13 +15,16 @@ const mainCSS = (cfg) => `
 
 .dtf-feedGroups .content-header-repost {
   position: absolute;
+  background-color: rgb(109 231 195);
   left: 0px;
-  margin: 14px 0 0 33px;
+  margin: 14px 0 0 22px;
   padding: unset;
   width: max-content;
   height: max-content;
   line-height: 0;
   font-size: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 0px rgb(0 0 0);
   z-index: 1;
 }
 .dtf-feedGroups .content-header-repost svg {
