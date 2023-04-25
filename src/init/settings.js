@@ -160,7 +160,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           label: 'Действие',
           name: 'action',
-          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
+          options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'filters.subsites.title'}, a:mainCfg,
@@ -205,7 +205,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           label: 'Действие',
           name: 'action',
-          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
+          options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'filters.subsites.text'}, a:mainCfg,
@@ -250,7 +250,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           label: 'Действие',
           name: 'action',
-          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
+          options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'filters.blogs.title'}, a:mainCfg,
@@ -295,7 +295,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           label: 'Действие',
           name: 'action',
-          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
+          options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'filters.blogs.text'}, a:mainCfg,
@@ -340,7 +340,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           label: 'Действие',
           name: 'action',
-          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
+          options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]},
       inputs: {c:{g:'filters.ignored.visual.color'}, a:mainCfg,
@@ -370,7 +370,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           label: 'Действие',
           name: 'action',
-          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
+          options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]}
     });
@@ -387,7 +387,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           label: 'Действие',
           name: 'action',
-          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
+          options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]}
     });
@@ -404,7 +404,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           label: 'Действие',
           name: 'action',
-          options: [['collapse', 'свернуть'], ['delete', 'удалить']]
+          options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
       ]}
     });
