@@ -21,6 +21,9 @@ let defaultSettings = {
     }
   },
   'feeds': {
+    'scroll': {
+      'block': false
+    },
     'what to group': {
       'subsites': true,
       'blogs': true
