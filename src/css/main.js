@@ -365,11 +365,11 @@ const mainCSS = (cfg) => `
 }
 
 .dtf-feed-group .subGroup:is(.favoriteSubsite, .favoriteAuthor) {
-  background-color: ${cfg['feeds']['filters']['favorite']['visual']['color']['panel']};
+  background-color: ${cfg['feeds']['visual']['favorite']['color']['panel']};
   background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 49%, transparent);
 }
 .dtf-feedGroups .feed__item.l-island-round:is(.favoriteSubsite, .favoriteAuthor) .content-header {
-  background-color: ${cfg['feeds']['filters']['favorite']['visual']['color']['feed']};
+  background-color: ${cfg['feeds']['visual']['favorite']['color']['feed']};
   background-image: linear-gradient(45deg, transparent 5.5%, rgb(255 255 255) 5.5%);
 }
 .dtf-feedGroups .feed__item.l-island-round.favoriteAuthor .favoriteAuthor.btn {
@@ -466,7 +466,7 @@ const mainCSS = (cfg) => `
   filter: opacity(0.7);
 }
 .dtf-feedGroups .feed__item.l-island-round.watchedFeed .content-header {
-  background-color: ${cfg['feeds']['filters']['watched']['visual']['color']['feed']};
+  background-color: ${cfg['feeds']['visual']['watched']['color']['feed']};
 }
 .dtf-feedGroups .feed__item.l-island-round.watchedFeed .watchFeed.btn {
   background-color: rgb(243 160 208);
@@ -477,7 +477,7 @@ const mainCSS = (cfg) => `
   filter: opacity(0.7);
 }
 .dtf-feedGroups .feed__item.l-island-round:is(.ignoredFeed, .ignoredAuthor) .content-header {
-  background-color: ${cfg['feeds']['filters']['ignored']['visual']['color']['feed']};
+  background-color: ${cfg['feeds']['visual']['ignored']['color']['feed']};
 }
 .dtf-feedGroups .feed__item.l-island-round.ignoredFeed .ignoreFeed.btn {
   background-color: rgb(243 160 208);
@@ -487,7 +487,7 @@ const mainCSS = (cfg) => `
 
 
 .dtf-feed-group .subGroup:is(.ignoredSubsite, .ignoredAuthor, .ignoredFeed) {
-  background-color: ${cfg['feeds']['filters']['ignored']['visual']['color']['panel']};
+  background-color: ${cfg['feeds']['visual']['ignored']['color']['panel']};
   background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 49%, transparent);
 }
 
