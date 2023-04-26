@@ -24,23 +24,33 @@ let defaultSettings = {
     'scroll': {
       'block': false
     },
-    'visual': {
+    'settings': {
       'favorite': {
-        'color': {
-          'panel': '#a3f9c3',
-          'feed': '#a3f9c3'
+        'subsites': {
+          'prevent': 'collapsing'
+        },
+        'authors': {
+          'prevent': 'collapsing'
         }
       },
-      'ignored': {
-        'color': {
-          'panel': '#6c2e4c',
-          'feed': '#e5c6c6'
-        }
-      },
-      'watched': {
-        'color': {
-          'panel': '',
-          'feed': '#c7e5d7'
+      'visual': {
+        'favorite': {
+          'color': {
+            'panel': '#a3f9c3',
+            'feed': '#a3f9c3'
+          }
+        },
+        'ignored': {
+          'color': {
+            'panel': '#6c2e4c',
+            'feed': '#e5c6c6'
+          }
+        },
+        'watched': {
+          'color': {
+            'panel': '',
+            'feed': '#c7e5d7'
+          }
         }
       }
     },
@@ -63,14 +73,6 @@ let defaultSettings = {
       'watched': {
         'feeds': {
           'action': 'collapse'
-        }
-      },
-      'favorite': {
-        'subsites': {
-          'prevent': 'collapsing'
-        },
-        'authors': {
-          'prevent': 'collapsing'
         }
       },
       'subsites': {
