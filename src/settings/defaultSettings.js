@@ -43,7 +43,7 @@ let defaultSettings = {
         'ignored': {
           'color': {
             'panel': '#6c2e4c',
-            'feed': '#e5c6c6'
+            'feed': '#6c2e4c'
           }
         },
         'watched': {
