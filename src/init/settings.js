@@ -160,16 +160,16 @@ initMenu.setSettings = (main, mainCfg) => {
           {
               label: 'Действие с избранными подсайтами',
               name: 'action',
-              c:{g:'filters.favorite.subsite'},
-              options: [['none', 'ничего не делать'], ['prevent collapse', 'запрет сворачивания'], ['prevent delete', 'запрет удаления'],
-                        ['prevent collapse and delete', 'запрет сворачивания и удаления']]
+              c:{g:'filters.favorite.subsite.prevent'},
+              options: [['none', 'ничего не делать'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления'],
+                        ['prevent collapsing and deleting', 'запрет сворачивания и удаления']]
           },
           {
               label: 'Действие с избранными авторами',
               name: 'action',
-              c:{g:'filters.favorite.author'},
-              options: [['none', 'ничего не делать'], ['prevent collapse', 'запрет сворачивания'], ['prevent delete', 'запрет удаления'],
-                        ['prevent collapse and delete', 'запрет сворачивания и удаления']]
+              c:{g:'filters.favorite.author.prevent'},
+              options: [['none', 'ничего не делать'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления'],
+                        ['collapsing and deleting', 'запрет сворачивания и удаления']]
           }
       ]},
       inputs: {c:{g:'visual.ignored.color'}, a:mainCfg,
