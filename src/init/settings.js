@@ -152,6 +152,45 @@ initMenu.setSettings = (main, mainCfg) => {
       path: main,
       groupName: 'feeds',
       cName: 'grid',
+      legend: 'Фиды',
+      info: 'Действия с подсайтами, авторами и фидами',
+      rtn: [],
+      select: {a:mainCfg,
+        list:[
+          {
+              label: 'Действие с избранными подсайтами',
+              name: 'action',
+              c:{g:'filters.favorite.subsite'},
+              options: [['none', 'ничего не делать'], ['prevent collapse', 'запрет сворачивания'], ['prevent delete', 'запрет удаления'],
+                        ['prevent collapse and delete', 'запрет сворачивания и удаления']]
+          },
+          {
+              label: 'Действие с избранными авторами',
+              name: 'action',
+              c:{g:'filters.favorite.author'},
+              options: [['none', 'ничего не делать'], ['prevent collapse', 'запрет сворачивания'], ['prevent delete', 'запрет удаления'],
+                        ['prevent collapse and delete', 'запрет сворачивания и удаления']]
+          }
+      ]},
+      inputs: {c:{g:'visual.ignored.color'}, a:mainCfg,
+        list:[
+          {
+              type: 'color',
+              label: 'Цвет панели',
+              name: 'panel'
+          },
+          {
+            type: 'color',
+            label: 'Цвет фида',
+            name: 'feed'
+          }
+      ]}
+    });
+    
+    new Field({
+      path: main,
+      groupName: 'feeds',
+      cName: 'grid',
       legend: 'Вложения фидов',
       info: 'Какие вложения заменять на их улучшенные версии',
       rtn: [],
@@ -359,19 +398,6 @@ initMenu.setSettings = (main, mainCfg) => {
           name: 'action',
           options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
         }
-      ]},
-      inputs: {c:{g:'filters.ignored.visual.color'}, a:mainCfg,
-        list:[
-          {
-            type: 'color',
-            label: 'Цвет панели',
-            name: 'panel'
-          },
-          {
-            type: 'color',
-            label: 'Цвет фида',
-            name: 'feed'
-          }
       ]}
     });
 
