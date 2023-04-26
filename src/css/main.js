@@ -110,7 +110,8 @@ const mainCSS = (cfg) => `
 }
 .dtf-feedGroups .dtf-feed-group .groupHeader {
   display: block;
-  background-color: rgb(58 21 78);
+  background-color: #3a154e;
+  background-image: repeating-linear-gradient(180deg, #2e103e, transparent 50%);
   border-radius: 3px;
 }
 .dtf-feed-group .groupHeader :is(.title, .num, newMark) {
