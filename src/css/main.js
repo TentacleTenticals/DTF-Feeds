@@ -334,10 +334,7 @@ const mainCSS = (cfg) => `
   z-index: 0;
 }
 
-.dtf-feedGroups :is(.blogBlockedNoTitle, .blogBlockedTitle,
-.blogBlockedNoText, .blogBlockedText,
-.subsiteBlockedNoTitle, .subsiteBlockedTitle,
-.subsiteBlockedNoText, .subsiteBlockedText)::after {
+.dtf-feedGroups .blocked::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -491,53 +488,53 @@ const mainCSS = (cfg) => `
   background-image: repeating-linear-gradient(45deg, rgb(0 0 0) 49%, transparent);
 }
 
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedNoText::after {
+.dtf-feedGroups .feed__item.l-island-round.blog.blocked.noTitle.noText::after {
   content: 'Заголовок и текст ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedTitle.blogBlockedText::after {
+.dtf-feedGroups .feed__item.l-island-round.blog.blocked.title.text::after {
   content: 'Заголовок и текст ✗';
 }
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedTitle.blogBlockedNoText::after {
+.dtf-feedGroups .feed__item.l-island-round.blog.blocked.title.noText::after {
   content: 'Заголовок ✗, текст ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle.blogBlockedText::after {
+.dtf-feedGroups .feed__item.l-island-round.blog.blocked.noTitle.text::after {
   content: 'Заголовок ⦰, текст ✗';
 }
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoTitle::after {
+.dtf-feedGroups .feed__item.l-island-round.blog.blocked.noTitle::after {
   content: 'Заголовок ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedNoText::after {
+.dtf-feedGroups .feed__item.l-island-round.blog.blocked.noText::after {
   content: 'Текст ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedTitle::after {
+.dtf-feedGroups .feed__item.l-island-round.blog.blocked.title::after {
   content: 'Текст ✗';
 }
-.dtf-feedGroups .feed__item.l-island-round.blogBlockedText::after {
+.dtf-feedGroups .feed__item.l-island-round.blog.blocked.text::after {
   content: 'Текст ✗';
 }
 
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle.subsiteBlockedNoText::after {
+.dtf-feedGroups .feed__item.l-island-round.subsite.blocked.noTitle.noText::after {
   content: 'Заголовок и текст ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedTitle.subsiteBlockedText::after {
+.dtf-feedGroups .feed__item.l-island-round.subsite.blocked.title.text::after {
   content: 'Заголовок и текст ✗';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedTitle.subsiteBlockedNoText::after {
+.dtf-feedGroups .feed__item.l-island-round.subsite.blocked.title.noText::after {
   content: 'Заголовок ✗, текст ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle.subsiteBlockedText::after {
+.dtf-feedGroups .feed__item.l-island-round.subsite.blocked.noTitle.text::after {
   content: 'Заголовок ⦰, текст ✗';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoTitle::after {
+.dtf-feedGroups .feed__item.l-island-round.subsite.blocked.noTitle::after {
   content: 'Заголовок ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedNoText::after {
+.dtf-feedGroups .feed__item.l-island-round.subsite.blocked.noText::after {
   content: 'Текст ⦰';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedTitle::after {
+.dtf-feedGroups .feed__item.l-island-round.subsite.blocked.title::after {
   content: 'Текст ✗';
 }
-.dtf-feedGroups .feed__item.l-island-round.subsiteBlockedText::after {
+.dtf-feedGroups .feed__item.l-island-round.subsite.blocked.text::after {
   content: 'Текст ✗';
 }
 
