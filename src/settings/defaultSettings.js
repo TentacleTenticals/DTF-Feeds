@@ -61,10 +61,10 @@ let defaultSettings = {
       },
       'favorite': {
         'subsites': {
-          'action': 'prevent collapse'
+          'prevent': 'collapsing'
         },
         'authors': {
-          'action': 'prevent collapse'
+          'prevent': 'collapsing'
         }
       },
       'subsites': {
