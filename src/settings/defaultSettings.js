@@ -26,16 +26,22 @@ let defaultSettings = {
     },
     'visual': {
       'favorite': {
-        'panel': '#a3f9c3',
-        'feed': '#a3f9c3'
+        'color': {
+          'panel': '#a3f9c3',
+          'feed': '#a3f9c3'
+        }
       },
       'ignored': {
-        'panel': '#6c2e4c',
-        'feed': '#e5c6c6'
+        'color': {
+          'panel': '#6c2e4c',
+          'feed': '#e5c6c6'
+        }
       },
       'watched': {
-        'panel': '',
-        'feed': '#c7e5d7'
+        'color': {
+          'panel': '',
+          'feed': '#c7e5d7'
+        }
       }
     },
     'what to group': {
