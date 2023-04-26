@@ -334,7 +334,7 @@ const mainCSS = (cfg) => `
   z-index: 0;
 }
 
-.dtf-feedGroups .blocked::after {
+.dtf-feedGroups .feed__item.blocked::after {
   display: block;
   position: absolute;
   width: 100%;
