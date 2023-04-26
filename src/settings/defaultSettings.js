@@ -24,6 +24,20 @@ let defaultSettings = {
     'scroll': {
       'block': false
     },
+    'visual': {
+      'favorite': {
+        'panel': '#a3f9c3',
+        'feed': '#a3f9c3'
+      },
+      'ignored': {
+        'panel': '#6c2e4c',
+        'feed': '#e5c6c6'
+      },
+      'watched': {
+        'panel': '',
+        'feed': '#c7e5d7'
+      }
+    },
     'what to group': {
       'subsites': true,
       'blogs': true
@@ -38,31 +52,19 @@ let defaultSettings = {
         },
         'subsites': {
           'action': 'collapse'
-        },
-        'visual': {
-          'color': {
-            'panel': '#6c2e4c',
-            'feed': '#e5c6c6'
-          }
         }
       },
       'watched': {
         'feeds': {
           'action': 'collapse'
-        },
-        'visual': {
-          'color': {
-            'panel': '',
-            'feed': '#c7e5d7'
-          }
         }
       },
       'favorite': {
-        'visual': {
-          'color': {
-            'panel': '#a3f9c3',
-            'feed': '#a3f9c3'
-          }
+        'subsites': {
+          'action': 'prevent collapse'
+        },
+        'authors': {
+          'action': 'prevent collapse'
         }
       },
       'subsites': {
