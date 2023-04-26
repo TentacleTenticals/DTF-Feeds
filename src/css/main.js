@@ -445,9 +445,7 @@ const mainCSS = (cfg) => `
 
 
 
-.dtf-feedGroups .feed__item.l-island-round.ignoredSubsite>:nth-child(1) {
-  filter: opacity(0.7);
-}
+
 .dtf-feedGroups .feed__item.l-island-round:is(.ignoredSubsite, .ignoredAuthor, .ignoredFeed) .content-header {
   background-color: rgb(215 148 171);
   background-image: linear-gradient(45deg, transparent 5.5%, rgb(255 255 255) 5.5%);
@@ -470,12 +468,6 @@ const mainCSS = (cfg) => `
   font-weight: 500;
 }
 
-.dtf-feedGroups .feed__item.l-island-round.ignoredFeed>:nth-child(1) {
-  filter: opacity(0.7);
-}
-.dtf-feedGroups .feed__item.l-island-round:is(.ignoredFeed, .ignoredAuthor) .content-header {
-  background-color: ${cfg['feeds']['settings']['visual']['ignored']['color']['feed']};
-}
 .dtf-feedGroups .feed__item.l-island-round.ignoredFeed .ignoreFeed.btn {
   background-color: rgb(243 160 208);
   font-weight: 500;
