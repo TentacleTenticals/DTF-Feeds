@@ -172,7 +172,7 @@ initMenu.setSettings = (main, mainCfg) => {
                         ['collapsing and deleting', 'запрет сворачивания и удаления']]
           }
       ]},
-      inputs: {c:{g:'visual.ignored.color'}, a:mainCfg,
+      inputs: {c:{g:'settings.visual.ignored.color'}, a:mainCfg,
         list:[
           {
               type: 'color',
