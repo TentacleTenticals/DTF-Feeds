@@ -159,15 +159,15 @@ initMenu.setSettings = (main, mainCfg) => {
       list:[
         {
             label: 'Действие с избранными подсайтами',
-            name: 'action',
-            c:{g:'settings.favorite.subsites.prevent'},
+            name: 'prevent',
+            c:{g:'settings.favorite.subsites'},
             options: [['none', 'ничего не делать'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления'],
                       ['prevent collapsing and deleting', 'запрет сворачивания и удаления']]
         },
         {
             label: 'Действие с избранными авторами',
-            name: 'action',
-            c:{g:'settings.favorite.authors.prevent'},
+            name: 'prevent',
+            c:{g:'settings.favorite.authors'},
             options: [['none', 'ничего не делать'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления'],
                       ['collapsing and deleting', 'запрет сворачивания и удаления']]
         }
