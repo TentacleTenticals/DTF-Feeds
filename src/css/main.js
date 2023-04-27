@@ -454,10 +454,6 @@ const mainCSS = (cfg) => `
 }
 
 
-
-.dtf-feedGroups .feed__item.l-island-round.watchedFeed>:nth-child(1) {
-  filter: opacity(0.7);
-}
 .dtf-feedGroups .feed__item.l-island-round.watchedFeed .content-header {
   background-color: ${cfg['feeds']['settings']['visual']['watched']['color']['feed']};
 }
