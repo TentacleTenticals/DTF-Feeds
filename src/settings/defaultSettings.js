@@ -50,6 +50,11 @@ let defaultSettings = {
           'color': {
             'feed': '#c7e5d7'
           }
+        },
+        'editor': {
+          'color': {
+            'feed': '#bde3f7'
+          }
         }
       }
     },
