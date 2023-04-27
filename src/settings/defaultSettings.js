@@ -79,6 +79,11 @@ let defaultSettings = {
           'action': 'collapse'
         }
       },
+      'editor': {
+        'feeds': {
+          'action': 'collapse'
+        }
+      },
       'subsites': {
         'title': {
           'active': true,
