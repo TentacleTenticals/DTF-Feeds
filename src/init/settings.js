@@ -168,12 +168,6 @@ initMenu.setSettings = (main, mainCfg) => {
             name: 'prevent',
             c:{g:'settings.favorite.authors'},
             options: [['all', 'запрет всего'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
-        },
-        {
-            label: 'Действие с фидами от редакторов',
-            name: 'prevent',
-            c:{g:'settings.editor.subsites'},
-            options: [['all', 'запрет всего'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
         }
     ]}
   });
