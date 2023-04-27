@@ -16,7 +16,7 @@
 // @require https://github.com/TentacleTenticals/dtf-libs-2.0/raw/main/libs/settings/dataMenu.js
 // @require https://github.com/TentacleTenticals/dtf-libs-2.0/raw/main/libs/settings/infoMenu.js
 //
-// @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/settings/defaultSettings.js
+// @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/settings/defaultSettings.js?
 // @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/init/settings.js
 // @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/init/data.js
 // @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/init/info.js
@@ -32,21 +32,6 @@
 /* jshint esversion:8 */
 
 (() => {
-  class menuButton{
-    constructor({path, text, title, buttons}){
-      this.main=document.createElement('div');
-      this.main.className='dtf-menuButton';
-      this.main.textContent=text;
-      title ? this.main.title=title : '';
-      path.appendChild(this.main);
-
-      this.list=document.createElement('div');
-      this.list.className='menuList';
-      this.main.appendChild(this.list);
-
-      buttons(this.list);
-    }
-  };
   class Alert{
     constructor({text, type, alert, timer}){
       if(!document.getElementById('dtf-buttonsField')){
@@ -243,6 +228,19 @@ class FeedGroups{
       num.textContent=(subList.children.length);
     }
   }
+  MenuButton({path, text, title, buttons}){
+    let main=document.createElement('div');
+    main.className='dtf-menuButton';
+    main.textContent=text;
+    if(title) main.title=title;
+    path.appendChild(main);
+
+    let list=document.createElement('div');
+    list.className='menuList';
+    main.appendChild(list);
+
+    buttons(list);
+  }
   FeedActions(path, m){
     if(m.querySelector(`div[class=feed-actions]`)) return;
     function getInfo(target){
@@ -283,10 +281,10 @@ class FeedGroups{
     new Button({
       path: main,
       text: '↭\uFE0E',
+      cName: 'btn collapsed',
       title: 'Свернуть фид',
       name: 'collapseFeed btn',
       onclick: (e) => {
-        // if(e.target.parentNode.parentNode.parentNode.parentNode.classList.value.match(/watched|ignored/)) return;
         e.target.parentNode.parentNode.parentNode.parentNode.classList.toggle('collapsed');
       }
     });
@@ -294,6 +292,7 @@ class FeedGroups{
     new Button({
       path: main,
       text: '✔️',
+      cName: 'btn watchedFeed',
       title: 'Пометить как просмотрено. Фид будет свёрнут всегда',
       name: 'watchFeed btn',
       onclick: (e) => {
@@ -338,6 +337,7 @@ class FeedGroups{
     new Button({
       path: main,
       text: '🚫',
+      cName: 'btn ignoredFeed',
       title: 'Пометить как игнорировано. Фид будет свёрнут всегда',
       name: 'ignoreFeed btn',
       onclick: (e) => {
@@ -378,7 +378,7 @@ class FeedGroups{
       }
     })
 
-    new menuButton({
+    this.MenuButton({
       path: main,
       text: '📓',
       title: 'Действия с авторами',
@@ -386,6 +386,7 @@ class FeedGroups{
         new Button({
           path: path,
           text: '💘',
+          cName: 'btn favoriteAuthor',
           title: 'Добавить автора в избранное',
           name: 'favoriteAuthor btn',
           onclick: (e) => {
@@ -421,6 +422,7 @@ class FeedGroups{
         new Button({
           path: path,
           text: '💢',
+          cName: 'btn ignoredAuthor',
           title: 'Добавить автора в игнорируемые',
           name: 'ignoreAuthor btn',
           onclick: (e) => {
@@ -457,7 +459,7 @@ class FeedGroups{
     })
 
 
-    new menuButton({
+    this.MenuButton({
       path: main,
       text: '📚',
       title: 'Действия с подсайтами',
@@ -465,6 +467,7 @@ class FeedGroups{
         new Button({
           path: path,
           text: '💘',
+          cName: 'btn favoriteSubsite',
           title: 'Добавить подсайт в избранные',
           name: 'favoriteSubsite btn',
           onclick: (e) => {
@@ -495,6 +498,7 @@ class FeedGroups{
         new Button({
           path: path,
           text: '💢',
+          cName: 'btn ignoredSubsite',
           title: 'Добавить подсайт в игнорируемые',
           name: 'ignoreSubsite btn',
           onclick: (e) => {
@@ -578,7 +582,7 @@ class FeedGroups{
 
   function feedsSearch(){
     const panel = document.getElementById('dtf-feedGroups');
-    if(getPageType(document.location.href) !== 'topics' && mainCfg['working mode']['type'] === 'panel' && panel){
+    if(mainCfg['working mode']['type'] === 'panel' && panel){
       panel.children[0].disabled = true;
       console.log('Disabled');
     }
@@ -612,9 +616,6 @@ class FeedGroups{
     let subsitesTextFilter;
     let location = getPageType(document.location.href);
     if(mainCfg['feeds']['filters']['subsites']['title']['words'].length > 0){
-      // new Promise(() => {
-      //   ''
-      // })
       try{
         const arr = mainCfg['feeds']['filters']['blogs']['title']['words'].filter(e => e).join('|');
         if(arr) blogsTitleFilter = new RegExp(arr, 'mi');
@@ -670,11 +671,15 @@ class FeedGroups{
       }
       console.log('subsitesTextFilter ', subsitesTextFilter);
     }
-    function videoReplace(video){
+    function videoReplace(path, video){
       if(video.getAttribute('data-andropov-type') === 'video' && video.getAttribute('data-video-service') === 'default'){
-        console.log('VIDEO', video.closest('figure'));
+        // console.log('VIDEO', path.parentNode);
+        // if(!path.parentNode || path.parentNode === 'null') return;
+        let pp;
+        path.parentNode ? pp = path.parentNode : pp = path;
+        console.log('VIDEO', pp);
         let main=new Div({
-          path: video.closest('figure'),
+          path: pp,
           cName: 'cont',
           rtn: []
         });
@@ -720,15 +725,25 @@ class FeedGroups{
             e.target.parentNode.classList.toggle('playing');
           }
         });
-        video.closest('figure').remove();
+        // path.replaceChildren(main);
+        path.remove();
       }
     }
     for(let i = 0, arr = document.querySelectorAll(`div[id=page_wrapper] .feed .feed__container:nth-child(1):not(.dtf-feedGroups) .feed__item.l-island-round`); i < arr.length; i++){
       const container = arr[i].querySelector(`.content-container`);
       const header = arr[i].querySelector(`.content-header__info`);
       const control = arr[i].querySelector(`.content-header__item--controls`).children[0];
-      let video;
-      if(mainCfg['feeds']['attachments']['replacing']) video = arr[i].querySelector(`.andropov_video`);
+      const att = {};
+      const action = {};
+      if(container) for(let c = 0, arr = container.children, len = arr.length; c < len; c++){
+        // console.log(arr[i])
+        if(!arr[c].className) continue;
+        if(arr[c].className.match('content-title')) att.title = arr[c].textContent.trim();
+        if(arr[c].className.match('content-title') && arr[c].children[0]) att.editor = true;
+        if(arr[c].className.match('l-island-a') && arr[c].children[0] && arr[c].children[0].tagName === 'P') att.text = arr[c].children[0].textContent.trim();
+        if(arr[c].className.match('figure-image') && arr[c].querySelector(`.andropov_video`)) att.video = {path:arr[c], video:arr[c].querySelector(`.andropov_video`)};
+      }
+      // if(mainCfg['feeds']['attachments']['replacing']) att.video = arr[i].querySelector(`.andropov_video`);
       if(header.children.length <= 2){
         if(mainCfg['working mode']['where to react'][location] && !mainCfg['working mode']['where to react']['types to show'][location].match(/blogs$|subsites and blogs/)){
           arr[i].remove();
@@ -740,23 +755,27 @@ class FeedGroups{
           if(mainCfg['script data']['watched']['feeds'].some(a => a?.feedID === control.getAttribute('data-content-id'))){
             // console.log('Blog watched!');
             if(mainCfg['feeds']['filters']['watched']['feeds']['action'] === 'collapse'){
-              arr[i].classList.add('watchedFeed', 'collapsed');
+              action.collapse = true;
+              arr[i].classList.add('watchedFeed');
             }else
             if(mainCfg['feeds']['filters']['watched']['feeds']['action'] === 'delete'){
-              arr[i].remove();
+              action.delete = true;
+
               // console.log('Watched feed is removed');
-              continue;
+
             }
           }
           if(mainCfg['script data']['ignored']['feeds'].some(a => a?.feedID === control.getAttribute('data-content-id'))){
             // console.log('Blog ignored!');
             if(mainCfg['feeds']['filters']['ignored']['feeds']['action'] === 'collapse'){
-              arr[i].classList.add('ignoredFeed', 'collapsed');
+              action.collapse = true;
+              arr[i].classList.add('ignoredFeed');
             }else
             if(mainCfg['feeds']['filters']['ignored']['feeds']['action'] === 'delete'){
-              arr[i].remove();
+              action.delete = true;
+
               // console.log('Ignored feed is removed');
-              continue;
+
             }
           }
           if(mainCfg['script data']['favorite']['authors'].some(a => a?.authorID === control.getAttribute('data-user-id'))){
@@ -766,42 +785,48 @@ class FeedGroups{
           if(mainCfg['script data']['ignored']['authors'].some(a => a?.authorID === control.getAttribute('data-user-id'))){
             // console.log('I see ignored author!');
             if(mainCfg['feeds']['filters']['ignored']['authors']['action'] === 'collapse'){
-              arr[i].classList.add('ignoredAuthor', 'collapsed');
+              action.collapse = true;
+              arr[i].classList.add('ignoredAuthor');
             }else
             if(mainCfg['feeds']['filters']['ignored']['authors']['action'] === 'delete'){
-              arr[i].remove();
+              action.delete = true;
+
               // console.log('Ignored author is removed');
-              continue;
+
             }
           }
           if(container){
             {
               if(mainCfg['feeds']['filters']['blogs']['title']['active']){
                 if(mainCfg['feeds']['filters']['blogs']['title']['react no text']){
-                  if(!container.children[0].classList.value.match(/content-title/)){
+                  if(!att.title){
                     // console.log('BLOG NO TITLE!', arr[i]);
                     if(mainCfg['feeds']['filters']['blogs']['title']['action'] === 'collapse'){
-                      arr[i].classList.add('blogBlockedNoTitle', 'collapsed');
+                      action.collapse = true;
+                      arr[i].classList.add('blog', 'blocked', 'noTitle');
                     }else
                     if(mainCfg['feeds']['filters']['blogs']['title']['action'] === 'delete'){
-                      arr[i].remove();
+                      action.delete = true;
+
                       // console.log('Blog feed removed1', arr[i]);
-                      continue;
+
                     }
                   }
                 }
                 if(mainCfg['feeds']['filters']['blogs']['title']['react text'] && blogsTitleFilter){
-                  if(container.children[0].classList.value.match(/content-title/)){
+                  if(att.title){
                     // console.log('Title: ', container.children[0].textContent.trim());
-                    if(container.children[0].textContent.trim().match(blogsTitleFilter)){
+                    if(att.title.match(blogsTitleFilter)){
                       // console.log('Blogs title filter found item!', container.children[0].textContent.trim());
                       if(mainCfg['feeds']['filters']['blogs']['title']['action'] === 'collapse'){
-                        arr[i].classList.add('blogBlockedTitle', 'collapsed');
+                        action.collapse = true;
+                        arr[i].classList.add('blog', 'blocked', 'title');
                       }else
                       if(mainCfg['feeds']['filters']['blogs']['title']['action'] === 'delete'){
-                        arr[i].remove();
+                        action.delete = true;
+
                         // console.log('Blog feed removed2', arr[i]);
-                        continue;
+
                       }
                     }
                   }
@@ -809,30 +834,34 @@ class FeedGroups{
               }
               if(mainCfg['feeds']['filters']['blogs']['text']['active']){
                 if(mainCfg['feeds']['filters']['blogs']['text']['react no text']){
-                  if(!arr[i].querySelector(`.content-container p`)){
+                  if(!att.text){
                     // console.log('BLOG NO TEXT!', arr[i]);
                     if(mainCfg['feeds']['filters']['blogs']['text']['action'] === 'collapse'){
-                      arr[i].classList.add('blogBlockedNoText', 'collapsed');
+                      action.collapse = true;
+                      arr[i].classList.add('blog', 'blocked', 'noText');
                     }else
                     if(mainCfg['feeds']['filters']['blogs']['text']['action'] === 'delete'){
-                      arr[i].remove();
+                      action.delete = true;
+
                       // console.log('Blog feed removed1', arr[i]);
-                      continue;
+
                     }
                   }
                 }
                 if(mainCfg['feeds']['filters']['blogs']['text']['react text'] && blogsTextFilter){
-                  if(arr[i].querySelector(`.content-container p`)){
+                  if(att.text){
                     // console.log('Text: ', arr[i].querySelector(`div[class=content-container] p`).textContent.trim());
-                    if(container.textContent.trim().match(blogsTextFilter)){
+                    if(att.text.match(blogsTextFilter)){
                       // console.log('Blogs text filter found item!');
                       if(mainCfg['feeds']['filters']['blogs']['text']['action'] === 'collapse'){
-                        arr[i].classList.add('blogBlockedText', 'collapsed');
+                        action.collapse = true;
+                        arr[i].classList.add('blog', 'blocked', 'text');
                       }else
                       if(mainCfg['feeds']['filters']['blogs']['text']['action'] === 'delete'){
-                        arr[i].remove();
+                        action.delete = true;
+
                         // console.log('Blog feed removed1', arr[i]);
-                        continue;
+
                       }
                     }
                   }
@@ -840,6 +869,31 @@ class FeedGroups{
               }
             }
           }
+          const cl = arr[i].className;
+          if(cl.match(/watchedFeed/)){
+            if(action.collapse) arr[i].classList.add('collapsed');
+            else
+            if(action.delete){
+              arr[i].remove();
+              continue;
+            }
+          }else
+          if((cl.match(/blocked/) ? cl.match(/blocked/) : '') && cl.match(/favoriteAuthor/)){
+            if(action.collapse && !mainCfg['feeds']['settings']['favorite']['authors']['prevent'].match(/collapsing|all/)) arr[i].classList.add('collapsed');
+            else
+            if(action.delete && !mainCfg['feeds']['settings']['favorite']['authors']['prevent'].match(/deleting|all/)){
+              arr[i].remove();
+              continue;
+            }
+          }else{
+            if(action.collapse) arr[i].classList.add('collapsed');
+            else
+            if(action.delete){
+              arr[i].remove();
+              continue;
+            }
+          }
+          if(att.video) videoReplace(att.video.path, att.video.video);
           if(mainCfg['working mode']['type'] === 'panel'){
             new FeedGroups().FeedActions(header, arr[i]);
             document.getElementById('dtf-feedGroups').children[2].children[1].appendChild(arr[i]);
@@ -857,26 +911,10 @@ class FeedGroups{
             }else{
               document.getElementById('dtf-feedGroups').children[2].children[1].appendChild(arr[i]);
             }
-            if(video) videoReplace(video);
           }else
           if(mainCfg['working mode']['type'] === 'obs'){
             new FeedGroups().FeedActions(header, arr[i]);
             document.getElementById('dtf-feedGroups').appendChild(arr[i]);
-            // if(mainCfg['script data']['favorite']['authors'].some(a => a?.authorID === control.getAttribute('data-user-id'))){
-            //   // console.log('I see favorite!');
-            //   arr[i].classList.add('favoriteAuthor');
-            // }
-            // if(mainCfg['script data']['ignored']['authors'].some(a => a?.authorID === control.getAttribute('data-user-id'))){
-            //   // console.log('I see blocked!');
-            //   if(mainCfg['feeds']['filters']['ignored']['authors']['action'] === 'collapse'){
-            //     arr[i].classList.add('ignoredAuthor', 'collapsed');
-            //   }else{
-            //     arr[i].remove();
-            //     // console.log('Ignored author is removed');
-            //     continue;
-            //   }
-            // }
-            if(video) videoReplace(video);
           }
         }
       }else
@@ -889,26 +927,39 @@ class FeedGroups{
 
           if(header.children[1].classList.value.match(/content-header-author/)){
             {
+              if(att.editor){
+                arr[i].classList.add('editor');
+                if(mainCfg['feeds']['filters']['editor']['feeds']['action'] === 'collapse'){
+                  action.collapse = true;
+                }else
+                if(mainCfg['feeds']['filters']['editor']['feeds']['action'] === 'delete'){
+                  action.delete = true;
+                }
+              }
               if(mainCfg['script data']['watched']['feeds'].some(a => a?.feedID === control.getAttribute('data-content-id'))){
                 // console.log('Watched!');
                 if(mainCfg['feeds']['filters']['watched']['feeds']['action'] === 'collapse'){
-                  arr[i].classList.add('watchedFeed', 'collapsed');
+                  action.collapse = true;
+                  arr[i].classList.add('watchedFeed');
                 }else
                 if(mainCfg['feeds']['filters']['watched']['feeds']['action'] === 'delete'){
-                  arr[i].remove();
+                  action.delete = true;
+
                   // console.log('Watched feed is removed');
-                  continue;
+
                 }
               };
               if(mainCfg['script data']['ignored']['feeds'].some(a => a?.feedID === control.getAttribute('data-content-id'))){
                 // console.log('Blocked!');
                 if(mainCfg['feeds']['filters']['ignored']['feeds']['action'] === 'collapse'){
-                  arr[i].classList.add('ignoredFeed', 'collapsed');
+                  action.collapse = true;
+                  arr[i].classList.add('ignoredFeed');
                 }else
                 if(mainCfg['feeds']['filters']['ignored']['feeds']['action'] === 'delete'){
-                  arr[i].remove();
+                  action.delete = true;
+
                   // console.log('Ignored feed is removed');
-                  continue;
+
                 }
               }
               if(mainCfg['script data']['favorite']['authors'].some(a => a?.authorID === control.getAttribute('data-user-id'))){
@@ -918,12 +969,14 @@ class FeedGroups{
               if(mainCfg['script data']['ignored']['authors'].some(a => a?.authorID === control.getAttribute('data-user-id'))){
                 // console.log('I see blocked!');
                 if(mainCfg['feeds']['filters']['ignored']['authors']['action'] === 'collapse'){
-                  arr[i].classList.add('ignoredAuthor', 'collapsed');
+                  action.collapse = true;
+                  arr[i].classList.add('ignoredAuthor');
                 }else
                 if(mainCfg['feeds']['filters']['ignored']['authors']['action'] === 'delete'){
-                  arr[i].remove();
+                  action.delete = true;
+
                   // console.log('Ignored author is removed');
-                  continue;
+
                 }
               }
               if(mainCfg['script data']['favorite']['subsites'].some(a => a?.authorID === control.getAttribute('data-subsite-id'))){
@@ -933,43 +986,49 @@ class FeedGroups{
               if(mainCfg['script data']['ignored']['subsites'].some(a => a?.authorID === control.getAttribute('data-subsite-id'))){
                 // console.log('I see ignored subsite!');
                 if(mainCfg['feeds']['filters']['ignored']['subsites']['action'] === 'collapse'){
-                  arr[i].classList.add('ignoredSubsite', 'collapsed');
+                  action.collapse = true;
+                  arr[i].classList.add('ignoredSubsite');
                 }else
                 if(mainCfg['feeds']['filters']['ignored']['subsites']['action'] === 'delete'){
-                  arr[i].remove();
+                  action.delete = true;
+
                   // console.log('Ignored subsite is removed');
-                  continue;
+
                 }
               }
               if(container){
                 {
                   if(mainCfg['feeds']['filters']['subsites']['title']['active']){
                     if(mainCfg['feeds']['filters']['subsites']['title']['react no text']){
-                      if(!container.children[0].classList.value.match(/content-title/)){
+                      if(!att.title){
                         // console.log('NO TITLE!', arr[i]);
                         if(mainCfg['feeds']['filters']['subsites']['title']['action'] === 'collapse'){
-                          arr[i].classList.add('subsiteBlockedNoTitle', 'collapsed');
+                          action.collapse = true;
+                          arr[i].classList.add('subsite', 'blocked', 'noTitle');
                         }else
                         if(mainCfg['feeds']['filters']['subsites']['title']['action'] === 'delete'){
-                          arr[i].remove();
+                          action.delete = true;
+
                           // console.log('Subsite feed removed1', arr[i]);
-                          continue;
+
                         }
                       }
                     }
                     if(mainCfg['feeds']['filters']['subsites']['title']['react text'] && subsitesTitleFilter){
                       // let subsitesTitleFilter = new RegExp(mainCfg['feeds']['filters']['subsites']['title']['words'].join('|'), 'mi');
-                      if(container.children[0].classList.value.match(/content-title/)){
+                      if(att.title){
                         // console.log('Title: ', container.children[0].textContent.trim());
-                        if(container.children[0].textContent.trim().match(subsitesTitleFilter)){
+                        if(att.title.match(subsitesTitleFilter)){
                           // console.log('Subsutes title filter found item!', container.children[0].textContent.trim());
                           if(mainCfg['feeds']['filters']['subsites']['title']['action'] === 'collapse'){
-                            arr[i].classList.add('subsiteBlockedTitle', 'collapsed');
+                            action.collapse = true;
+                            arr[i].classList.add('subsite', 'blocked', 'title');
                           }else
                           if(mainCfg['feeds']['filters']['subsites']['title']['action'] === 'delete'){
-                            arr[i].remove();
+                            action.delete = true;
+
                             // console.log('Subsite feed removed2', arr[i]);
-                            continue;
+
                           }
                         }
                       }
@@ -977,30 +1036,34 @@ class FeedGroups{
                   }
                   if(mainCfg['feeds']['filters']['subsites']['text']['active']){
                     if(mainCfg['feeds']['filters']['subsites']['text']['react no text']){
-                      if(!arr[i].querySelector(`.content-container p`)){
+                      if(!att.text){
                         // console.log('NO TEXT!', arr[i]);
                         if(mainCfg['feeds']['filters']['subsites']['text']['action'] === 'collapse'){
-                          arr[i].classList.add('subsiteBlockedNoText', 'collapsed');
+                          action.collapse = true;
+                          arr[i].classList.add('subsite', 'blocked', 'noText');
                         }else
                         if(mainCfg['feeds']['filters']['subsites']['text']['action'] === 'delete'){
-                          arr[i].remove();
+                          action.delete = true;
+
                           // console.log('Subsite feed removed1', arr[i]);
-                          continue;
+
                         }
                       }
                     }
                     if(mainCfg['feeds']['filters']['subsites']['text']['react text'] && subsitesTextFilter){
                       // let subsitesTitleFilter = new RegExp(mainCfg['feeds']['filters']['subsites']['title']['words'].join('|'), 'mi');
-                      if(arr[i].querySelector(`.content-container p`)){
-                        if(arr[i].querySelector(`.content-container p`).textContent.trim().match(subsitesTextFilter)){
+                      if(att.text){
+                        if(att.text.match(subsitesTextFilter)){
                           // console.log('Subsites text filter found item!', arr[i].querySelector(`div[class=content-container] p`).textContent.trim());
                           if(mainCfg['feeds']['filters']['subsites']['text']['action'] === 'collapse'){
-                            arr[i].classList.add('subsiteBlockedText', 'collapsed');
+                            action.collapse = true;
+                            arr[i].classList.add('subsite', 'blocked', 'text');
                           }else
                           if(mainCfg['feeds']['filters']['subsites']['text']['action'] === 'delete'){
-                            arr[i].remove();
+                            action.delete = true;
+
                             // console.log('Subsite feed removed2', arr[i]);
-                            continue;
+
                           }
                         }
                       }
@@ -1008,6 +1071,47 @@ class FeedGroups{
                   }
                 }
               }
+              const cl = arr[i].className;
+              if(cl.match(/watchedFeed/)){
+                if(action.collapse) arr[i].classList.add('collapsed');
+                else
+                if(action.delete){
+                  arr[i].remove();
+                  continue;
+                }
+              }else
+              if(cl.match(/favoriteAuthor/)){
+                if(action.collapse && !mainCfg['feeds']['settings']['favorite']['authors']['prevent'].match(/collapsing|all/)) arr[i].classList.add('collapsed');
+                else
+                if(action.delete && !mainCfg['feeds']['settings']['favorite']['authors']['prevent'].match(/deleting|all/)){
+                  arr[i].remove();
+                  continue;
+                }
+              }
+              if(cl.match(/favoriteSubsite/)){
+                if(action.collapse && !mainCfg['feeds']['settings']['favorite']['subsites']['prevent'].match(/collapsing|all/)) arr[i].classList.add('collapsed');
+                else
+                if(action.delete && !mainCfg['feeds']['settings']['favorite']['subsites']['prevent'].match(/deleting|all/)){
+                  arr[i].remove();
+                  continue;
+                }
+              }else
+              if(cl.match(/editor/)){
+                if(action.collapse) arr[i].classList.add('collapsed');
+                else
+                if(action.delete){
+                  arr[i].remove();
+                  continue;
+                }
+              }else{
+                if(action.collapse) arr[i].classList.add('collapsed');
+                else
+                if(action.delete){
+                  arr[i].remove();
+                  continue;
+                }
+              }
+              if(att.video) videoReplace(att.video.path, att.video.video);
               if(mainCfg['working mode']['type'] === 'panel'){
                 new FeedGroups().FeedActions(header, arr[i]);
                 // document.getElementById('dtf-feedGroups').children[1].children[1].appendChild(arr[i]);
@@ -1025,13 +1129,11 @@ class FeedGroups{
                 }else{
                   document.getElementById('dtf-feedGroups').children[1].children[1].appendChild(arr[i]);
                 }
-                if(video) videoReplace(video);
               }
               if(mainCfg['working mode']['type'] === 'obs'){
                 new FeedGroups().FeedActions(header, arr[i]);
                 document.getElementById('dtf-feedGroups').appendChild(arr[i]);
               }
-                if(video) videoReplace(video);
             }
         }
 
@@ -1046,7 +1148,7 @@ class FeedGroups{
 
 
   function run(){
-    console.log('RUN feeds 3.0');
+    console.log('RUN feeds 2.0');
     initCfg = {
       func: () => {
         console.log('Встраивание инициализации в DTF-Feeds...');
@@ -1059,7 +1161,7 @@ class FeedGroups{
 
         new Css('DTF-core', dtfCoreCSS, true);
 
-        new Css('DTF-Feeds', mainCSS(mainCfg));
+        new Css('DTF-Feeds', mainCSS(mainCfg), 'replace');
         new Css('settingsLoader', menuLoaderCSS, true);
 
         if(mainCfg['working mode']['where to react'][getPageType(document.location.href)]){
@@ -1068,7 +1170,7 @@ class FeedGroups{
             console.log(`[Mode] режим панели`);
             new FeedGroups().Main();
             feedsSearch();
-            if(getPageType(document.location.href) === 'topics') return;
+            // if(getPageType(document.location.href) === 'topics') return;
             if(obs.panelBtn){
               obsPanelBtn('restart');
             }else{
@@ -1094,7 +1196,6 @@ class FeedGroups{
       }
     }
     if(!mainCfg){
-      console.log('DS', defaultSettings);
       new Db().settingsLoader(dbGen(defaultSettings['scriptInfo']), initCfg);
       // console.log(db);
     }else
@@ -1106,7 +1207,7 @@ class FeedGroups{
           console.log(`[Mode] режим панели`);
           new FeedGroups().Main();
           feedsSearch();
-          if(getPageType(document.location.href) === 'topics') return;
+          // if(getPageType(document.location.href) === 'topics') return;
           if(obs.panelBtn){
             obsPanelBtn('restart');
           }else{
@@ -1171,16 +1272,6 @@ class FeedGroups{
     });
   }
 
-  function filterBuilder(){
-    return new RegExp(`${document.location.href.origin}/${[
-      mainCfg['working mode']['where to react']['popular'] ? 'popular$' : '',
-      mainCfg['working mode']['where to react']['new'] ? 'new$' : '',
-      mainCfg['working mode']['where to react']['my feeds'] ? 'my/new$' : '',
-      mainCfg['working mode']['where to react']['bookmarks'] ? 'bookmarks$' : '',
-      mainCfg['working mode']['where to react']['subsites'] ? '' : '',
-      mainCfg['working mode']['where to react']['topics'] ? `[^/]+/[0-9]+-[^]+$` : ''
-      ].filter(i => i).join('|')}`);
-  }
   function getPageType(url){
     if(!url){
       console.log('[GetPageType] error - no url');
