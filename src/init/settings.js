@@ -151,7 +151,7 @@ initMenu.setSettings = (main, mainCfg) => {
   new Field({
     path: main,
     groupName: 'feeds',
-    cName: 'grid',
+    cName: 'flex',
     legend: 'Фиды',
     info: 'Действия с подсайтами, авторами и фидами',
     rtn: [],
