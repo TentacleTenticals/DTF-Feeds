@@ -48,7 +48,6 @@ let defaultSettings = {
         },
         'watched': {
           'color': {
-            'panel': '',
             'feed': '#c7e5d7'
           }
         }
