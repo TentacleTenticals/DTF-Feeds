@@ -153,7 +153,7 @@ initMenu.setSettings = (main, mainCfg) => {
     groupName: 'feeds',
     cName: 'flex',
     legend: 'Фиды',
-    info: 'Действия с подсайтами, авторами и фидами',
+    info: 'Действия с фидами от избранных посдайтов или авторов',
     rtn: [],
     select: {a:mainCfg,
       list:[
@@ -161,13 +161,13 @@ initMenu.setSettings = (main, mainCfg) => {
             label: 'Действие с избранными подсайтами',
             name: 'prevent',
             c:{g:'settings.favorite.subsites'},
-            options: [['all', 'ничего не делать'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
+            options: [['all', 'запрет всего'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
         },
         {
             label: 'Действие с избранными авторами',
             name: 'prevent',
             c:{g:'settings.favorite.authors'},
-            options: [['all', 'ничего не делать'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
+            options: [['all', 'запрет всего'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
         }
     ]}
   });
