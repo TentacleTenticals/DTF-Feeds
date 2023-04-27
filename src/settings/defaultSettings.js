@@ -27,10 +27,10 @@ let defaultSettings = {
     'settings': {
       'favorite': {
         'subsites': {
-          'prevent': 'collapsing'
+          'prevent': 'collapsing and deleting'
         },
         'authors': {
-          'prevent': 'collapsing'
+          'prevent': 'collapsing and deleting'
         }
       },
       'visual': {
