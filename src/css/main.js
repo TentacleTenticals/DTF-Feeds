@@ -569,6 +569,28 @@ const mainCSS = (cfg) => `
   z-index: 10;
 }
 
+.dtf-feedGroups .feed__item.collapsed .feed-actions .btn.collapsed {
+  background-color: #d2adeb;
+}
+.dtf-feedGroups .feed__item.watchedFeed .feed-actions .btn.watchedFeed {
+  background-color: #d2adeb;
+}
+.dtf-feedGroups .feed__item.ignoredFeed .feed-actions .btn.ignoredFeed {
+  background-color: #d2adeb;
+}
+.dtf-feedGroups .feed__item.ignoredAuthor .feed-actions .btn.ignoredAuthor {
+  background-color: #d2adeb;
+}
+.dtf-feedGroups .feed__item.favoriteAuthor .feed-actions .btn.favoriteAuthor {
+  background-color: #d2adeb;
+}
+.dtf-feedGroups .feed__item.favoriteSubsite .feed-actions .btn.favoriteSubsite {
+  background-color: #d2adeb;
+}
+.dtf-feedGroups .feed__item.ignoredSubsite .feed-actions .btn.ignoredSubsite {
+  background-color: #d2adeb;
+}
+
 
 
 .dtf-feedGroups .cont {
