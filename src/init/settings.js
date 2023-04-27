@@ -158,15 +158,21 @@ initMenu.setSettings = (main, mainCfg) => {
     select: {a:mainCfg,
       list:[
         {
-            label: 'Действие с избранными подсайтами',
+            label: 'Действие с фидами от избранных подсайтов',
             name: 'prevent',
             c:{g:'settings.favorite.subsites'},
             options: [['all', 'запрет всего'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
         },
         {
-            label: 'Действие с избранными авторами',
+            label: 'Действие с фидами от избранных авторов',
             name: 'prevent',
             c:{g:'settings.favorite.authors'},
+            options: [['all', 'запрет всего'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
+        },
+        {
+            label: 'Действие с фидами от редакторов',
+            name: 'prevent',
+            c:{g:'settings.editor.subsites'},
             options: [['all', 'запрет всего'], ['collapsing', 'запрет сворачивания'], ['deleting', 'запрет удаления']]
         }
     ]}
