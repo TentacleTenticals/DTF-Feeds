@@ -592,6 +592,11 @@ const mainCSS = (cfg) => `
 }
 
 
+.feed__item.l-island-round.editor .content-header-author--subsite {
+  background-color: ${cfg['feeds']['settings']['visual']['editor']['color']['feed']};
+  border-radius: 10px;
+  box-shadow: 0 0 2px 0px rgb(0 0 0);
+}
 
 .dtf-feedGroups .cont {
   display: flex;
