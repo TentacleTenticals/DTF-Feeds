@@ -455,7 +455,7 @@ const mainCSS = (cfg) => `
 
 
 .dtf-feedGroups .feed__item.l-island-round.watchedFeed .content-header {
-  background-color: ${cfg['feeds']['settings']['visual']['watched']['color']['feed']};
+  background-image: linear-gradient(45deg, transparent 5.5%, ${cfg['feeds']['settings']['visual']['watched']['color']['feed']} 5.5%);
 }
 .dtf-feedGroups .feed__item.l-island-round.watchedFeed .watchFeed.btn {
   background-color: rgb(243 160 208);
