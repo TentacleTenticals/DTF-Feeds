@@ -227,11 +227,6 @@ initMenu.setSettings = (main, mainCfg) => {
       list:[
         {
           type: 'color',
-          label: 'Цвет панели',
-          name: 'panel'
-        },
-        {
-          type: 'color',
           label: 'Цвет фида',
           name: 'feed'
         }
