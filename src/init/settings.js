@@ -230,6 +230,22 @@ initMenu.setSettings = (main, mainCfg) => {
         }
     ]}
   });
+  new Field({
+    path: main,
+    groupName: 'feeds',
+    cName: 'grid',
+    legend: 'Избранные',
+    info: 'Настройки фидов',
+    rtn: [],
+    inputs: {c:{g:'settings.visual.editor.color'}, a:mainCfg,
+      list:[
+        {
+          type: 'color',
+          label: 'Цвет фида',
+          name: 'feed'
+        }
+    ]}
+  });
   
   new Field({
     path: main,
