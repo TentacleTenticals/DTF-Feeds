@@ -260,6 +260,12 @@ initMenu.setSettings = (main, mainCfg) => {
           type: 'checkbox',
           label: 'Видео',
           name: 'videos'
+        },
+        {
+          type: 'number',
+          label: 'Видео',
+          name: 'videos',
+          c:{g:'attachments.size', n:'px'}
         }
     ]}
   });
