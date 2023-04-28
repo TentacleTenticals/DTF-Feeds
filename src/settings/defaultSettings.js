@@ -51,7 +51,7 @@ let defaultSettings = {
             'feed': '#eadaf7'
           }
         },
-        'editor': {
+        'editorial': {
           'color': {
             'feed': '#bde3f7'
           }
@@ -79,7 +79,7 @@ let defaultSettings = {
           'action': 'collapse'
         }
       },
-      'editor': {
+      'editorial': {
         'feeds': {
           'action': 'collapse'
         }
