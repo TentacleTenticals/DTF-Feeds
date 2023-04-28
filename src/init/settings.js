@@ -264,7 +264,7 @@ initMenu.setSettings = (main, mainCfg) => {
         {
           type: 'number',
           label: 'Видео',
-          name: 'videos',
+          name: 'video',
           c:{g:'attachments.size', n:'px'}
         }
     ]}
