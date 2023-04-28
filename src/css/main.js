@@ -70,6 +70,8 @@ const mainCSS = (cfg) => `
   overflow-y: auto;
   max-height: 730px;
   box-shadow: 0px 0px 3px 1px black;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(18, 101, 134) rgb(0, 0, 0);
 }
 
 .dtf-feedGroups .groupList {
