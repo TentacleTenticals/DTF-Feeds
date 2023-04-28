@@ -234,10 +234,10 @@ initMenu.setSettings = (main, mainCfg) => {
     path: main,
     groupName: 'feeds',
     cName: 'grid',
-    legend: 'Избранные',
+    legend: 'От редакции',
     info: 'Настройки фидов',
     rtn: [],
-    inputs: {c:{g:'settings.visual.editor.color'}, a:mainCfg,
+    inputs: {c:{g:'settings.visual.editorial.color'}, a:mainCfg,
       list:[
         {
           type: 'color',
@@ -503,6 +503,23 @@ initMenu.setSettings = (main, mainCfg) => {
     info: 'Просмотренные',
     rtn: [],
     select: {c:{g:'filters.watched.feeds'}, a:mainCfg,
+      list:[
+      {
+        label: 'Действие',
+        name: 'action',
+        options: [['none', 'ничего не делать'], ['collapse', 'свернуть'], ['delete', 'удалить']]
+      }
+    ]}
+  });
+  
+  new Field({
+    path: main,
+    groupName: 'feeds',
+    cName: 'grid',
+    legend: 'Фильтры фидов',
+    info: 'От редакции',
+    rtn: [],
+    select: {c:{g:'filters.editorial.feeds'}, a:mainCfg,
       list:[
       {
         label: 'Действие',
