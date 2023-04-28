@@ -48,7 +48,7 @@ let defaultSettings = {
         },
         'watched': {
           'color': {
-            'feed': '#c7e5d7'
+            'feed': '#eadaf7'
           }
         },
         'editor': {
