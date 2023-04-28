@@ -53,7 +53,7 @@ let defaultSettings = {
         },
         'editorial': {
           'color': {
-            'feed': '#bde3f7'
+            'feed': '#c1e5fb'
           }
         }
       }
