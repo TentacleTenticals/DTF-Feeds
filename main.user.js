@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name        DTF feeds v2.0
+// @name        DTF-Feeds
 // @namespace   https://github.com/TentacleTenticals/DTF-feeds
 // @match       https://dtf.ru/*
 // @grant       none
-// @version     1.0.3
+// @version     1.0.4
 // @author      Tentacle Tenticals
 // @description Скрипт для управления DTF фидами
 // @homepage    https://github.com/TentacleTenticals/DTF-feeds
@@ -16,7 +16,7 @@
 // @require https://github.com/TentacleTenticals/dtf-libs-2.0/raw/main/libs/settings/dataMenu.js
 // @require https://github.com/TentacleTenticals/dtf-libs-2.0/raw/main/libs/settings/infoMenu.js
 //
-// @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/settings/defaultSettings.js?
+// @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/settings/defaultSettings.js
 // @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/init/settings.js
 // @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/init/data.js
 // @require https://github.com/TentacleTenticals/DTF-Feeds/raw/main/src/init/info.js
@@ -739,7 +739,7 @@ class FeedGroups{
         // console.log(arr[i])
         if(!arr[c].className) continue;
         if(arr[c].className.match('content-title')) att.title = arr[c].textContent.trim();
-        if(arr[c].className.match('content-title') && arr[c].children[0]) att.editor = true;
+        if(arr[c].className.match('content-title') && arr[c].children[0]) att.editorial = true;
         if(arr[c].className.match('l-island-a') && arr[c].children[0] && arr[c].children[0].tagName === 'P') att.text = arr[c].children[0].textContent.trim();
         if(arr[c].className.match('figure-image') && arr[c].querySelector(`.andropov_video`)) att.video = {path:arr[c], video:arr[c].querySelector(`.andropov_video`)};
       }
@@ -927,12 +927,12 @@ class FeedGroups{
 
           if(header.children[1].classList.value.match(/content-header-author/)){
             {
-              if(att.editor){
-                arr[i].classList.add('editor');
-                if(mainCfg['feeds']['filters']['editor']['feeds']['action'] === 'collapse'){
+              if(att.editorial){
+                arr[i].classList.add('editorial');
+                if(mainCfg['feeds']['filters']['editorial']['feeds']['action'] === 'collapse'){
                   action.collapse = true;
                 }else
-                if(mainCfg['feeds']['filters']['editor']['feeds']['action'] === 'delete'){
+                if(mainCfg['feeds']['filters']['editorial']['feeds']['action'] === 'delete'){
                   action.delete = true;
                 }
               }
@@ -1096,7 +1096,7 @@ class FeedGroups{
                   continue;
                 }
               }else
-              if(cl.match(/editor/)){
+              if(cl.match(/editorial/)){
                 if(action.collapse) arr[i].classList.add('collapsed');
                 else
                 if(action.delete){
