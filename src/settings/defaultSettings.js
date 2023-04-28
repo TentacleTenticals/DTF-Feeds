@@ -88,14 +88,14 @@ let defaultSettings = {
         'title': {
           'active': true,
           'action': 'collapse',
-          'react text': true,
+          'react text': false,
           'react no text': true,
           'words': []
         },
         'text': {
           'active': true,
           'action': 'collapse',
-          'react text': true,
+          'react text': false,
           'react no text': true,
           'words': []
         }
@@ -104,14 +104,14 @@ let defaultSettings = {
         'title': {
           'active': true,
           'action': 'collapse',
-          'react text': true,
+          'react text': false,
           'react no text': true,
           'words': []
         },
         'text': {
           'active': true,
           'action': 'collapse',
-          'react text': true,
+          'react text': false,
           'react no text': true,
           'words': []
         }
@@ -122,7 +122,7 @@ let defaultSettings = {
         'videos': true
       },
       'size': {
-        'video': 300
+        'video': 500
       }
     }
   },
